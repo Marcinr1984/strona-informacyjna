@@ -5,7 +5,6 @@ import InfoBar from "../components/InfoBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
-import MobileMenu from "../components/MobileMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +33,6 @@ export default function RootLayout({
       >
         <InfoBar />
         <Menu />
-        <MobileMenu />
         <Header />
         <main className="w-full">{children}</main>
         <Footer />
