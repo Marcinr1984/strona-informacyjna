@@ -67,18 +67,18 @@ useEffect(() => {
               </svg>
             )}
           </button>
-          <Link
-            href="/auth/login"
+          <a
+            href="https://qr.dlabliskich.pl/auth/login"
             className="text-white hover:text-cyan-400 text-sm font-medium px-4 py-2.5"
           >
             Zaloguj się
-          </Link>
-          <Link
-            href="/auth/register"
+          </a>
+          <a
+            href="https://qr.dlabliskich.pl/auth/register"
             className="bg-[#1e293b] hover:bg-[#334155] text-white font-medium rounded-full text-sm px-6 py-2.5 text-center transition-colors"
           >
             Załóż konto
-          </Link>
+          </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
