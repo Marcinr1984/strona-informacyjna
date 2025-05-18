@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
@@ -18,11 +19,11 @@ export default function Footer() {
         </a>
         <p className="my-6 text-gray-500 dark:text-gray-400">Tworzymy cyfrowe miejsca pamięci, które pozwalają dzielić się wspomnieniami, zdjęciami i historią Twoich bliskich.</p>
         <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-          <li><a href="/" className="mr-4 hover:underline md:mr-6">Strona główna</a></li>
-          <li><a href="/jak-to-dziala" className="mr-4 hover:underline md:mr-6">Jak to działa</a></li>
-          <li><a href="/cennik" className="mr-4 hover:underline md:mr-6">Cennik</a></li>
-          <li><a href="/faq" className="mr-4 hover:underline md:mr-6">FAQ</a></li>
-          <li><a href="/kontakt" className="mr-4 hover:underline md:mr-6">Kontakt</a></li>
+          <li><Link href="/" className="mr-4 hover:underline md:mr-6">Strona główna</Link></li>
+          <li><Link href="/jak-to-dziala" className="mr-4 hover:underline md:mr-6">Jak to działa</Link></li>
+          <li><Link href="/cennik" className="mr-4 hover:underline md:mr-6">Cennik</Link></li>
+          <li><Link href="/faq" className="mr-4 hover:underline md:mr-6">FAQ</Link></li>
+          <li><Link href="/kontakt" className="mr-4 hover:underline md:mr-6">Kontakt</Link></li>
         </ul>
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 DlaBliskich.pl. Wszelkie prawa zastrzeżone.</span>
       </div>
