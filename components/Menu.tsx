@@ -1,26 +1,84 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const pathname = usePathname()
 
+useEffect(() => {
+  const theme = localStorage.theme
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+    setIsDarkMode(false)
+  } else if (theme === 'dark') {
+    document.documentElement.classList.add('dark')
+    setIsDarkMode(true)
+  } else {
+    // Jeśli nie ma ustawień — sprawdź preferencje systemowe
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (prefersDark) {
+      document.documentElement.classList.add('dark')
+      localStorage.theme = 'dark'
+      setIsDarkMode(true)
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.theme = 'light'
+      setIsDarkMode(false)
+    }
+  }
+}, [])
+
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="bg-white dark:bg-gray-900 border-gray-200">
+      <div className="w-full flex flex-wrap items-center justify-between p-4 px-12">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DlaBliskich</span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onClick={() => {
+              const htmlEl = document.documentElement
+              if (htmlEl.classList.contains('dark')) {
+                htmlEl.classList.remove('dark')
+                localStorage.theme = 'light'
+                setIsDarkMode(false)
+              } else {
+                htmlEl.classList.add('dark')
+                localStorage.theme = 'dark'
+                setIsDarkMode(true)
+              }
+            }}
+            role="button"
+            aria-label="Change theme"
+            className="dark:text-sky-500 text-sky-500 hover:bg-gray-800 p-2 rounded-lg dark:hover:bg-gray-800"
+          >
+            {isDarkMode ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+              </svg>
+            )}
+          </button>
+          <Link
+            href="/auth/login"
+            className="text-white hover:text-cyan-400 text-sm font-medium px-4 py-2.5"
           >
             Zaloguj się
-          </button>
+          </Link>
+          <Link
+            href="/auth/register"
+            className="bg-[#1e293b] hover:bg-[#334155] text-white font-medium rounded-full text-sm px-6 py-2.5 text-center transition-colors"
+          >
+            Załóż konto
+          </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -35,7 +93,7 @@ export default function Menu() {
           </button>
         </div>
         <div className={`${isOpen ? 'block' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1`} id="navbar-cta">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-black dark:text-white">
             {[
               { href: '/', label: 'Start' },
               { href: '/jak-to-dziala', label: 'Jak to działa' },
@@ -50,8 +108,8 @@ export default function Menu() {
                     href={href}
                     className={`block py-2 px-3 md:p-0 rounded-sm ${
                       isActive
-                        ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500'
-                        : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
+                        ? 'text-cyan-400 bg-transparent md:bg-transparent md:text-cyan-400 md:dark:text-cyan-400'
+                        : 'text-black dark:text-white hover:text-cyan-400 md:hover:bg-transparent md:dark:hover:text-cyan-400 dark:hover:text-cyan-400'
                     }`}
                     aria-current={isActive ? 'page' : undefined}
                   >
