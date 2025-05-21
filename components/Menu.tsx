@@ -33,7 +33,7 @@ useEffect(() => {
 }, [])
 
   return (
-    <nav className="bg-white dark:bg-gray-900 border-gray-200">
+    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow">
       <div className="w-full flex flex-wrap items-center justify-between p-4 px-12">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Logo" />
