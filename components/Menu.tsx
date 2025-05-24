@@ -52,7 +52,7 @@ useEffect(() => {
                 localStorage.theme = 'dark'
                 setIsDarkMode(true)
               }
-            }}xs
+            }}
             role="button"
             aria-label="Change theme"
             className="theme-toggle dark:text-sky-500 text-sky-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
