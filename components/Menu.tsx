@@ -33,11 +33,11 @@ useEffect(() => {
 }, [])
 
   return (
-    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow">
+    <nav className="sticky top-0 z-50 bg-[var(--menu-background)] text-[var(--foreground)] shadow-none transition-colors duration-300">
       <div className="w-full flex flex-wrap items-center justify-between p-4 px-12">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DlaBliskich</span>
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--foreground)]">DlaBliskich</span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
@@ -52,10 +52,10 @@ useEffect(() => {
                 localStorage.theme = 'dark'
                 setIsDarkMode(true)
               }
-            }}
+            }}xs
             role="button"
             aria-label="Change theme"
-            className="dark:text-sky-500 text-sky-500 hover:bg-gray-800 p-2 rounded-lg dark:hover:bg-gray-800"
+            className="theme-toggle dark:text-sky-500 text-sky-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
           >
             {isDarkMode ? (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -69,13 +69,13 @@ useEffect(() => {
           </button>
           <a
             href="https://qr.dlabliskich.pl/auth/login"
-            className="text-white hover:text-cyan-400 text-sm font-medium px-4 py-2.5"
+            className="text-[var(--foreground)] hover:text-cyan-400 text-sm font-medium px-4 py-2.5 transition-colors"
           >
             Zaloguj się
           </a>
           <a
             href="https://qr.dlabliskich.pl/auth/register"
-            className="bg-[#1e293b] hover:bg-[#334155] text-white font-medium rounded-full text-sm px-6 py-2.5 text-center transition-colors"
+            className="register-button bg-[#1e293b] hover:bg-[#334155] text-white font-medium rounded-full text-sm px-6 py-2.5 text-center transition-colors"
           >
             Załóż konto
           </a>
@@ -93,7 +93,7 @@ useEffect(() => {
           </button>
         </div>
         <div className={`${isOpen ? 'block' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1`} id="navbar-cta">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-black dark:text-white">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[var(--foreground)] rounded-lg bg-[var(--menu-background)] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[var(--menu-background)] transition-colors duration-300">
             {[
               { href: '/', label: 'Start' },
               { href: '/jak-to-dziala', label: 'Jak to działa' },
@@ -109,7 +109,7 @@ useEffect(() => {
                     className={`block py-2 px-3 md:p-0 rounded-sm ${
                       isActive
                         ? 'text-cyan-400 bg-transparent md:bg-transparent md:text-cyan-400 md:dark:text-cyan-400'
-                        : 'text-black dark:text-white hover:text-cyan-400 md:hover:bg-transparent md:dark:hover:text-cyan-400 dark:hover:text-cyan-400'
+                        : 'text-[var(--foreground)] hover:text-cyan-400 transition-colors'
                     }`}
                     aria-current={isActive ? 'page' : undefined}
                   >

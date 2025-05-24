@@ -1,26 +1,50 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
+html {
   --background: #ffffff;
   --foreground: #171717;
+  --footer-background: #ffffff;
+  --menu-background: #ffffff;
+  --primary-dark: transparent;
+  --primary-light: #e5e7eb; /* Tailwind gray-200 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --footer-background: #111827;
+  --menu-background: #111827;
+  --primary-dark: #111827;
+  --primary-light: transparent;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html:not(.dark) .theme-toggle:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+html:not(.dark) .register-button {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity)); /* gray-100 */
+  color: #000;
+}
+
+html:not(.dark) .register-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity)); /* gray-200 */
+  color: #000;
+}
+
+html:not(.dark) footer hr {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)); /* gray-200 */
 }

@@ -5,6 +5,7 @@ import InfoBar from "../components/InfoBar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
+import ThemeProvider from "../components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dla Bliskich",
   description: "Upamiętnij swoich bliskich w wyjątkowy sposób.",
-};
+}; 
 
 export default function RootLayout({
   children,
@@ -27,10 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
+    <html lang="pl" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300 overflow-x-hidden`}
       >
+        <ThemeProvider />
         <InfoBar />
         <Menu />
         <Header />
