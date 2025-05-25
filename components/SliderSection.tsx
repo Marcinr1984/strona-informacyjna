@@ -11,7 +11,7 @@ const SliderSection = () => {
     >
       <div
         className="absolute inset-0"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
       />
       <div className="relative z-10 mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
         <div className="mx-auto max-w-prose text-center transition-colors duration-200 relative">
@@ -32,14 +32,7 @@ const SliderSection = () => {
                 style={{ backgroundColor: "var(--color-sky-500)", border: "1px solid var(--color-sky-500)" }}
                 href="#"
               >
-                Zacznij teraz
-              </a>
-
-              <a
-                className="inline-block rounded border border-gray-200 px-5 py-3 font-medium shadow-sm transition-colors hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-gray-800"
-                href="#"
-              >
-                Dowiedz się więcej
+                Zamów tabliczkę z kodem QR
               </a>
             </div>
           </div> {/* koniec .text-center */}
