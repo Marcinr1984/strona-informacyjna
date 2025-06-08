@@ -6,7 +6,7 @@ export default function KontaktPage() {
       </h1>
 
       <form
-        className="mt-10 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md p-8 space-y-6 transition-colors duration-300"
+        className="mt-10 max-w-xl mx-auto rounded-xl bg-[var(--primary-light)] dark:bg-[var(--primary-dark)] p-8 space-y-6 shadow transition-colors duration-300"
       >
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="space-y-2">
