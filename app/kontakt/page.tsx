@@ -6,7 +6,7 @@ export default function KontaktPage() {
       </h1>
 
       <form
-        className="mt-10 max-w-xl mx-auto rounded-xl bg-[var(--primary-light)] dark:bg-[var(--primary-dark)] p-8 space-y-6 shadow transition-colors duration-300"
+        className="mt-10 max-w-xl mx-auto rounded-xl bg-[var(--primary-light)] dark:bg-transparent p-8 space-y-6 transition-colors duration-300"
       >
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="space-y-2">
@@ -17,7 +17,7 @@ export default function KontaktPage() {
               type="text"
               id="name"
               name="name"
-              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
             />
           </div>
 
@@ -29,7 +29,7 @@ export default function KontaktPage() {
               type="email"
               id="email"
               name="email"
-              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
             />
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function KontaktPage() {
             id="message"
             name="message"
             rows={6}
-            className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+            className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
           />
         </div>
 
