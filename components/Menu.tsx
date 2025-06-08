@@ -36,7 +36,7 @@ useEffect(() => {
     <nav className="sticky top-0 z-50 bg-[var(--menu-background)] text-[var(--foreground)] shadow-none transition-colors duration-300">
       <div className="w-full flex flex-wrap items-center justify-between p-4 px-12">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/logo-dlabliskich-log.svg" className="h-8" alt="Logo Dla Bliskich" />
+          <img src="/logo-dlabliskich.svg" className="h-8" alt="Logo Dla Bliskich" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--foreground)]">DlaBliskich</span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
