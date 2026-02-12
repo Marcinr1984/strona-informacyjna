@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import ThemeProvider from "../components/ThemeProvider";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <ThemeProvider />
         <Menu />
+        <Breadcrumbs />
         <main className="w-full">{children}</main>
         <Footer />
       </body>
