@@ -19,17 +19,10 @@ useEffect(() => {
     document.documentElement.classList.add('dark')
     setIsDarkMode(true)
   } else {
-    // Jeśli nie ma ustawień — sprawdź preferencje systemowe
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (prefersDark) {
-      document.documentElement.classList.add('dark')
-      localStorage.theme = 'dark'
-      setIsDarkMode(true)
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.theme = 'light'
-      setIsDarkMode(false)
-    }
+    // Domyslnie strona startuje w jasnym motywie.
+    document.documentElement.classList.remove('dark')
+    localStorage.theme = 'light'
+    setIsDarkMode(false)
   }
 }, [])
 

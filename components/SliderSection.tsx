@@ -1,8 +1,17 @@
 const SliderSection = () => {
   return (
-    <section className="py-10 sm:py-12">
+    <section
+      className="relative overflow-hidden py-10 sm:py-12"
+      style={{
+        backgroundImage: "url('/slider-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-slate-950/45" />
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[1.4rem] border border-slate-200/70 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.16)] dark:border-slate-700 dark:bg-slate-900">
+        <div className="relative overflow-hidden rounded-[1.4rem] border border-slate-200/80 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.2)]">
           <div className="grid md:grid-cols-2">
             <div className="hero-gradient p-8 text-white sm:p-10">
               <span className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em]">
@@ -27,11 +36,11 @@ const SliderSection = () => {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 dark:bg-slate-900 sm:p-10">
-              <h2 className="text-3xl font-semibold text-slate-800 dark:text-slate-100">
+            <div className="bg-slate-50 p-8 sm:p-10">
+              <h2 className="text-3xl font-semibold text-slate-800">
                 Zacznij teraz
               </h2>
-              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-3 text-sm text-slate-600">
                 Zaloguj sie do kreatora lub zaloz konto i stworz strone pamieci krok po kroku.
               </p>
               <div className="mt-7 space-y-3">
@@ -42,13 +51,13 @@ const SliderSection = () => {
                   Utworz konto
                 </a>
                 <a
-                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
+                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100"
                   href="https://qr.dlabliskich.pl/auth/login"
                 >
                   Zaloguj sie
                 </a>
                 <a
-                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:text-slate-200 dark:hover:bg-slate-800"
+                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100"
                   href="/jak-to-dziala"
                 >
                   Jak to dziala
