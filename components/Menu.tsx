@@ -20,22 +20,38 @@ export default function Menu() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const isHome = pathname === '/'
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     document.documentElement.classList.remove('dark')
     localStorage.theme = 'light'
   }, [])
 
+  useEffect(() => {
+    if (!isHome) {
+      setScrolled(false)
+      return
+    }
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 80)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isHome])
+
   return (
     <header className="sticky top-0 z-50">
       <div
         className={`relative w-full overflow-hidden border-b text-white ${
-          isHome
+          isHome && !scrolled
             ? 'border-white/20 bg-slate-950/20 backdrop-blur-2xl'
             : 'border-[#1b2940] bg-[rgb(11,20,38)]'
         }`}
       >
-        {isHome && (
+        {isHome && !scrolled && (
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
         )}
         <div className="relative flex w-full items-center justify-between gap-4 px-5 py-5 lg:px-8 xl:px-12">
@@ -100,7 +116,7 @@ export default function Menu() {
           <div
             id="mobile-menu"
             className={`border-t px-4 py-3 lg:hidden ${
-              isHome
+              isHome && !scrolled
                 ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl'
                 : 'border-[#1b2940] bg-[rgb(11,20,38)]'
             }`}
