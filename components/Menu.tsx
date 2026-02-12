@@ -34,13 +34,22 @@ useEffect(() => {
 }, [])
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-[var(--surface-border)] bg-[var(--menu-background)]/95 text-[var(--foreground)] backdrop-blur-xl transition-colors duration-300">
+    <nav className="sticky top-0 z-50 border-b border-slate-700/70 bg-[var(--menu-background)] text-white transition-colors duration-300">
       <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} priority />
-          <span className="self-center whitespace-nowrap text-xl font-semibold text-[var(--foreground)] sm:text-2xl">DlaBliskich</span>
+          <span className="self-center whitespace-nowrap text-xl font-semibold text-white sm:text-2xl">DlaBliskich</span>
         </Link>
-        <div className="flex items-center gap-1 md:order-2 md:gap-2 rtl:space-x-reverse">
+        <div className="order-3 hidden w-full md:order-2 md:block md:w-auto md:flex-1 md:px-6">
+          <div className="max-w-md">
+            <input
+              type="text"
+              placeholder="Znajdź stronę pamięci lub osobę"
+              className="w-full rounded-xl border border-sky-200/20 bg-slate-900/60 px-4 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+            />
+          </div>
+        </div>
+        <div className="flex items-center gap-1 md:order-3 md:gap-2 rtl:space-x-reverse">
           <button
             onClick={() => {
               const htmlEl = document.documentElement
@@ -56,7 +65,7 @@ useEffect(() => {
             }}
             role="button"
             aria-label="Change theme"
-            className="theme-toggle rounded-lg p-2 text-sky-600 transition-colors hover:bg-gray-100 dark:text-sky-400 dark:hover:bg-gray-800"
+            className="theme-toggle rounded-lg p-2 text-sky-300 transition-colors hover:bg-slate-800"
           >
             {isDarkMode ? (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -70,20 +79,20 @@ useEffect(() => {
           </button>
           <a
             href="https://qr.dlabliskich.pl/auth/login"
-            className="hidden rounded-lg px-3 py-2 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-gray-100 hover:text-sky-600 md:inline-flex dark:hover:bg-gray-800"
+            className="hidden rounded-lg px-3 py-2 text-sm font-medium text-slate-100 transition-colors hover:bg-slate-800 md:inline-flex"
           >
             Zaloguj się
           </a>
           <a
             href="https://qr.dlabliskich.pl/auth/register"
-            className="hidden rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-700 md:inline-flex"
+            className="hidden rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
           >
             Załóż konto
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-slate-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 md:hidden"
             aria-controls="navbar-cta"
             aria-expanded={isOpen}
           >
@@ -93,8 +102,8 @@ useEffect(() => {
             </svg>
           </button>
         </div>
-        <div className={`${isOpen ? 'block' : 'hidden'} w-full items-center justify-between md:order-1 md:flex md:w-auto`} id="navbar-cta">
-          <ul className="mt-3 flex flex-col gap-1 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-3 font-medium shadow-sm md:mt-0 md:flex-row md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+        <div className={`${isOpen ? 'block' : 'hidden'} order-4 w-full items-center justify-between md:order-1 md:flex md:w-full`} id="navbar-cta">
+          <ul className="mt-3 flex flex-col gap-1 rounded-xl border border-slate-700 bg-slate-900 p-3 font-medium md:mt-0 md:flex-row md:gap-6 md:border-0 md:bg-transparent md:p-0">
             {[
               { href: '/', label: 'Start' },
               { href: '/o-nas', label: 'O nas' },
@@ -112,8 +121,8 @@ useEffect(() => {
                     href={href}
                     className={`block rounded-md px-3 py-2 text-sm transition-colors md:px-0 ${
                       isActive
-                        ? 'text-sky-600 md:text-sky-600 dark:text-sky-400'
-                        : 'text-[var(--foreground)] hover:text-sky-600 dark:hover:text-sky-400'
+                        ? 'text-cyan-300'
+                        : 'text-slate-200 hover:text-cyan-300'
                     }`}
                     aria-current={isActive ? 'page' : undefined}
                   >
