@@ -2,12 +2,13 @@ export default function KontaktPage() {
   return (
     <main className="page-shell max-w-4xl">
       <section className="panel p-8">
-        <span className="eyebrow">Kontakt</span>
+        <div className="mx-auto icon-chip">✉️</div>
+        <span className="eyebrow mt-4">Kontakt</span>
         <h1 className="section-title mt-4 text-center text-4xl transition-colors duration-300">
           Kontakt
         </h1>
 
-      <form className="mt-10 mx-auto max-w-xl space-y-6 rounded-xl bg-[var(--primary-light)] p-8 transition-colors duration-300 dark:bg-transparent">
+      <form className="mt-10 mx-auto max-w-xl space-y-6 rounded-xl bg-[var(--primary-light)] p-8 transition-colors duration-300">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="space-y-2">
             <label htmlFor="name" className="block text-sm font-medium text-[var(--foreground)] transition-colors duration-300">
@@ -17,7 +18,7 @@ export default function KontaktPage() {
               type="text"
               id="name"
               name="name"
-              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+              className="block w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
             />
           </div>
 
@@ -29,7 +30,7 @@ export default function KontaktPage() {
               type="email"
               id="email"
               name="email"
-              className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+              className="block w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
             />
           </div>
         </div>
@@ -42,14 +43,14 @@ export default function KontaktPage() {
             id="message"
             name="message"
             rows={6}
-            className="block w-full rounded-md border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-800 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+            className="block w-full rounded-md border border-gray-300 bg-gray-50 px-3 py-2 text-[var(--foreground)] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
           />
         </div>
 
         <div className="text-right">
           <button
             type="submit"
-            className="inline-flex justify-center rounded-md bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 transition-colors"
+            className="btn-primary px-6 py-3"
           >
             Wyślij
           </button>

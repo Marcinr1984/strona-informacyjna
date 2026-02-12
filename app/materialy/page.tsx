@@ -58,11 +58,12 @@ export default function MaterialyPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <span className="eyebrow">Materiały</span>
+        <div className="icon-chip">🧱</div>
+        <span className="eyebrow mt-4">Materiały</span>
         <h1 className="section-title mt-4 text-4xl">
           Materiały graweru kodu QR
         </h1>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
+        <p className="mt-4 text-gray-700">
           Wybierz materiał dopasowany do stylu nagrobka i oczekiwanego efektu wizualnego.
           Każda opcja łączy trwałość z estetyką i czytelnością kodu.
         </p>
@@ -78,11 +79,11 @@ export default function MaterialyPage() {
               <span className="mr-2">{material.icon}</span>
               {material.title}
             </h2>
-            <p className="mt-1 text-sm font-medium text-sky-600 dark:text-sky-400">
+            <p className="mt-1 text-sm font-medium text-sky-600">
               {material.subtitle}
             </p>
-            <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{material.description}</p>
-            <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">{material.support}</p>
+            <p className="mt-3 text-sm text-gray-700">{material.description}</p>
+            <p className="mt-3 text-sm text-gray-600">{material.support}</p>
           </article>
         ))}
       </section>
@@ -91,7 +92,7 @@ export default function MaterialyPage() {
         <h3 className="section-title text-2xl">
           Galerie realizacji
         </h3>
-        <p className="mt-3 text-gray-700 dark:text-gray-300">
+        <p className="mt-3 text-gray-700">
           Przy każdej ofercie umieścimy poglądowe fotografie gotowego produktu.
         </p>
         <PhotoPlaceholder label="Miejsce na fotografie realizacji dla każdego materiału" />

@@ -25,13 +25,14 @@ export default function FAQPage() {
   return (
     <main className="page-shell max-w-4xl">
       <section className="panel p-8">
-        <span className="eyebrow">FAQ</span>
+        <div className="icon-chip">❓</div>
+        <span className="eyebrow mt-4">FAQ</span>
         <h1 className="section-title mt-4 text-4xl">Najczęściej zadawane pytania</h1>
         <div className="mt-8 space-y-4">
           {faqItems.map((item) => (
             <article key={item.question} className="panel-muted p-5">
               <h2 className="section-title text-lg">{item.question}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 {item.answer}
               </p>
             </article>

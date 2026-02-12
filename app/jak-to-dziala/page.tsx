@@ -31,9 +31,10 @@ export default function JakToDzialaPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <span className="eyebrow">Proces</span>
+        <div className="icon-chip">🧭</div>
+        <span className="eyebrow mt-4">Proces</span>
         <h1 className="section-title mt-4 text-4xl">Jak to działa</h1>
-        <p className="mt-4 text-gray-700 dark:text-gray-300">
+        <p className="mt-4 text-gray-700">
           Cały proces zaprojektowaliśmy tak, aby był prosty, bezpieczny i wygodny dla rodzin.
         </p>
       </section>
@@ -44,15 +45,16 @@ export default function JakToDzialaPage() {
             key={step.title}
             className="panel p-6"
           >
+            <div className="icon-chip mb-4 h-9 w-9 text-sm">✓</div>
             <h2 className="section-title text-xl">{step.title}</h2>
-            <p className="mt-3 text-gray-700 dark:text-gray-300">{step.description}</p>
+            <p className="mt-3 text-gray-700">{step.description}</p>
           </article>
         ))}
       </section>
 
       <section className="panel mt-8 p-8">
         <h3 className="section-title text-2xl">Dodatkowe informacje</h3>
-        <ul className="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+        <ul className="mt-4 space-y-2 text-gray-700">
           {extras.map((item) => (
             <li key={item} className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" aria-hidden />
@@ -62,7 +64,7 @@ export default function JakToDzialaPage() {
         </ul>
         <a
           href="https://qr.dlabliskich.pl/auth/login"
-          className="mt-6 inline-flex rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600"
+          className="btn-primary mt-6 px-5 py-3 text-sm"
         >
           Przejdź do konfiguratora
         </a>

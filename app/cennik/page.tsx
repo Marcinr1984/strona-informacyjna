@@ -47,11 +47,12 @@ export default function CennikPage() {
   return (
     <main className="page-shell">
       <section className="panel mx-auto max-w-3xl p-8 text-center">
-        <span className="eyebrow">Oferta</span>
+        <div className="mx-auto icon-chip">💳</div>
+        <span className="eyebrow mt-4">Oferta</span>
         <h1 className="section-title mt-4 text-4xl transition-colors duration-300 sm:text-5xl">
           Cennik
         </h1>
-        <p className="mt-4 text-base text-gray-700 transition-colors duration-300 dark:text-gray-300 sm:text-lg">
+        <p className="mt-4 text-base text-gray-700 transition-colors duration-300 sm:text-lg">
           Wybierz plan dopasowany do liczby stron i zakresu wspomnien, ktore chcesz
           zachowac dla bliskich.
         </p>
@@ -61,9 +62,9 @@ export default function CennikPage() {
         {plans.map((plan) => (
           <article
             key={plan.name}
-            className={`panel p-6 transition-colors duration-300 ${
+              className={`panel p-6 transition-colors duration-300 ${
               plan.highlighted
-                ? "border-sky-500 bg-sky-50/65 dark:border-sky-400 dark:bg-sky-950/30"
+                ? "border-sky-500 bg-sky-50/65"
                 : ""
             }`}
           >
@@ -74,11 +75,11 @@ export default function CennikPage() {
             )}
 
             <h2 className="text-2xl font-semibold text-[var(--foreground)]">{plan.name}</h2>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{plan.description}</p>
+            <p className="mt-2 text-sm text-gray-600">{plan.description}</p>
 
             <div className="mt-6">
               <span className="text-4xl font-bold text-[var(--foreground)]">{plan.price}</span>
-              <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
+              <span className="ml-2 text-sm text-gray-600">
                 / {plan.period}
               </span>
             </div>
@@ -94,7 +95,7 @@ export default function CennikPage() {
 
             <a
               href="https://qr.dlabliskich.pl/auth/register"
-              className="mt-8 inline-flex w-full justify-center rounded-lg bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-600"
+              className="btn-primary mt-8 w-full px-4 py-3 text-sm"
             >
               {plan.ctaLabel}
             </a>
@@ -102,7 +103,7 @@ export default function CennikPage() {
         ))}
       </section>
 
-      <p className="mt-8 text-center text-sm text-gray-600 transition-colors duration-300 dark:text-gray-400">
+      <p className="mt-8 text-center text-sm text-gray-600 transition-colors duration-300">
         Potrzebujesz indywidualnej wyceny dla wiekszej liczby stron? Skontaktuj sie z nami
         przez zakladke Kontakt.
       </p>

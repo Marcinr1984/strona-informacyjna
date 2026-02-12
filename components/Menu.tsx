@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const NAV_LINKS = [
@@ -32,7 +31,7 @@ export default function Menu() {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-3">
-              <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
+              <span className="text-xl leading-none text-rose-400">❤</span>
               <span className="text-2xl font-semibold">DlaBliskich</span>
             </Link>
             <div className="hidden w-full max-w-md lg:block">
@@ -45,6 +44,12 @@ export default function Menu() {
           </div>
 
           <div className="flex items-center justify-end gap-2">
+            <div className="hidden items-center gap-2 rounded-full bg-[#131d33] px-2 py-1 md:flex">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-cyan-300 bg-white text-xs font-semibold text-cyan-600">
+                MR
+              </div>
+              <span className="pr-1 text-sm text-white/90">Marcin</span>
+            </div>
             <a
               href="https://qr.dlabliskich.pl/auth/login"
               className="hidden rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 md:inline-flex"

@@ -49,6 +49,13 @@ body {
   box-shadow: 0 14px 40px -28px rgba(14, 116, 144, 0.45);
 }
 
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  border-radius: 1.1rem;
+}
+
 .panel-muted {
   border: 1px dashed color-mix(in srgb, var(--surface-border) 85%, transparent);
   background: color-mix(in srgb, var(--surface) 86%, transparent);
@@ -87,6 +94,51 @@ body {
 
 .hero-gradient {
   background: linear-gradient(135deg, #12bde6 0%, #33a7e6 56%, #a74ce9 100%);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  background: linear-gradient(to right, #06b6d4, #8b5cf6);
+  color: #ffffff;
+  font-weight: 600;
+  transition: opacity 180ms ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: background-color 180ms ease;
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.icon-chip {
+  display: inline-flex;
+  height: 2.4rem;
+  width: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  color: #ffffff;
+  font-size: 1.1rem;
+  box-shadow: 0 14px 24px -18px rgba(14, 116, 144, 0.65);
 }
 
 html:not(.dark) .theme-toggle:hover {

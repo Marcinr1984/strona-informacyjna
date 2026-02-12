@@ -25,9 +25,10 @@ export default function ONasPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <span className="eyebrow">O nas</span>
+        <div className="icon-chip">💙</div>
+        <span className="eyebrow mt-4">O nas</span>
         <h1 className="section-title mt-4 text-4xl">Kim jesteśmy</h1>
-        <div className="mt-5 space-y-4 text-gray-700 dark:text-gray-300">
+        <div className="mt-5 space-y-4 text-gray-700">
           <p>
             Pamięć o bliskich to coś więcej niż imię wyryte w kamieniu. To historie, uśmiechy,
             głosy i chwile, które chcemy zachować na zawsze. Właśnie z tej potrzeby powstała
@@ -52,7 +53,7 @@ export default function ONasPage() {
       <section className="mt-8 grid gap-6 lg:grid-cols-2">
         <article className="panel p-8">
           <h2 className="section-title text-2xl">Co zawiera strona pamięci</h2>
-          <ul className="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="mt-4 space-y-2 text-gray-700">
             {memoryFeatures.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" aria-hidden />
@@ -61,7 +62,7 @@ export default function ONasPage() {
             ))}
           </ul>
           <h3 className="section-title mt-6 text-xl">Dlaczego warto</h3>
-          <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
+          <ul className="mt-3 space-y-2 text-gray-700">
             {benefits.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" aria-hidden />
@@ -73,7 +74,7 @@ export default function ONasPage() {
 
         <article className="panel p-8">
           <h3 className="section-title text-2xl">Materiały wizualne</h3>
-          <p className="mt-3 text-gray-700 dark:text-gray-300">
+          <p className="mt-3 text-gray-700">
             W tej sekcji umieścimy fotografie, które wzmacniają przekaz: kod QR na nagrobku
             oraz osobę korzystającą z rozwiązania.
           </p>
