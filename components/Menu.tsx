@@ -21,6 +21,7 @@ export default function Menu() {
   const [isOpen, setIsOpen] = useState(false)
   const isHome = pathname === '/'
   const [scrolled, setScrolled] = useState(false)
+  const solidMenuClasses = 'border-[#1b2940] bg-[#0b1426]'
 
   useEffect(() => {
     document.documentElement.classList.remove('dark')
@@ -48,7 +49,7 @@ export default function Menu() {
         className={`relative w-full overflow-hidden border-b text-white ${
           isHome && !scrolled
             ? 'border-white/20 bg-slate-950/20 backdrop-blur-2xl'
-            : 'border-[#1b2940] bg-[rgb(11,20,38)]'
+            : solidMenuClasses
         }`}
       >
         {isHome && !scrolled && (
@@ -118,7 +119,7 @@ export default function Menu() {
             className={`border-t px-4 py-3 lg:hidden ${
               isHome && !scrolled
                 ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl'
-                : 'border-[#1b2940] bg-[rgb(11,20,38)]'
+                : solidMenuClasses
             }`}
           >
             <nav className="grid gap-2 text-sm">
