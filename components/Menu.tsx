@@ -27,14 +27,14 @@ export default function Menu() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="border-b border-white/15 bg-black/35 text-white backdrop-blur-xl">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="w-full border-b border-white/18 bg-slate-950/30 text-white backdrop-blur-xl">
+        <div className="flex w-full items-center justify-between gap-4 px-5 py-3 lg:px-8 xl:px-12">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
             <span className="text-2xl font-semibold">DlaBliskich</span>
           </Link>
 
-          <nav className="hidden items-center gap-7 text-sm lg:flex">
+          <nav className="hidden flex-1 items-center justify-center gap-8 px-6 text-sm lg:flex">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href
               return (
@@ -50,9 +50,10 @@ export default function Menu() {
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
+            <span className="mx-2 h-7 w-px bg-white/45" />
             <a
               href="https://qr.dlabliskich.pl/auth/login"
-              className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/10"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/12"
             >
               Zaloguj sie
             </a>
@@ -64,13 +65,13 @@ export default function Menu() {
             </a>
           </div>
 
-          <button
-            onClick={() => setIsOpen((prev) => !prev)}
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white lg:hidden"
-            aria-label="Otworz menu"
-            aria-controls="mobile-menu"
-            aria-expanded={isOpen}
+            <button
+              onClick={() => setIsOpen((prev) => !prev)}
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/30 bg-black/20 text-white lg:hidden"
+              aria-label="Otworz menu"
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen}
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
               <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -79,7 +80,7 @@ export default function Menu() {
         </div>
 
         {isOpen && (
-          <div id="mobile-menu" className="border-t border-white/15 bg-black/55 px-4 py-3 lg:hidden">
+          <div id="mobile-menu" className="border-t border-white/20 bg-slate-950/38 px-4 py-3 backdrop-blur-xl lg:hidden">
             <nav className="grid gap-2 text-sm">
               {NAV_LINKS.map((link) => {
                 const active = pathname === link.href
