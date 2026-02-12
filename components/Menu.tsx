@@ -29,7 +29,7 @@ export default function Menu() {
     <header className="sticky top-0 z-50">
       <div className="relative w-full overflow-hidden border-b border-white/20 bg-slate-950/20 text-white backdrop-blur-2xl">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
-        <div className="relative flex w-full items-center justify-between gap-4 px-5 py-3 lg:px-8 xl:px-12">
+        <div className="relative flex w-full items-center justify-between gap-4 px-5 py-4 lg:px-8 xl:px-12">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
             <span className="text-2xl font-semibold">DlaBliskich</span>
