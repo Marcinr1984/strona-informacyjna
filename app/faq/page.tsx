@@ -1,27 +1,43 @@
+const faqItems = [
+  {
+    question: "Czym jest DlaBliskich?",
+    answer:
+      "DlaBliskich to platforma, która pozwala tworzyć cyfrowe miejsca pamięci, dzielić się wspomnieniami i zdjęciami bliskich osób.",
+  },
+  {
+    question: "Czy mogę udostępnić stronę pamięci rodzinie?",
+    answer:
+      "Tak. Po wygenerowaniu kodu QR możesz przekazać go rodzinie i przyjaciołom, aby wspólnie odwiedzać stronę pamięci.",
+  },
+  {
+    question: "Jak mogę edytować dane strony pamięci?",
+    answer:
+      "Po zalogowaniu się do konta przejdź do swoich projektów i wybierz stronę, którą chcesz zaktualizować.",
+  },
+  {
+    question: "Czy mogę wskazać opiekuna strony pamięci?",
+    answer:
+      "Tak. W konfiguratorze możesz wskazać opiekuna, który po uzyskaniu zgody pomoże aktualizować treści.",
+  },
+];
 
-
-import React from 'react';
-
-const FAQPage = () => {
+export default function FAQPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-10 dark:text-white">Najczęściej zadawane pytania</h1>
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Czym jest DlaBliskich?</h2>
-          <p className="text-gray-600 dark:text-gray-400">DlaBliskich to platforma, która pozwala tworzyć cyfrowe miejsca pamięci, dzielić się wspomnieniami i zdjęciami bliskich osób.</p>
+    <main className="page-shell max-w-4xl">
+      <section className="panel p-8">
+        <span className="eyebrow">FAQ</span>
+        <h1 className="section-title mt-4 text-4xl">Najczęściej zadawane pytania</h1>
+        <div className="mt-8 space-y-4">
+          {faqItems.map((item) => (
+            <article key={item.question} className="panel-muted p-5">
+              <h2 className="section-title text-lg">{item.question}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                {item.answer}
+              </p>
+            </article>
+          ))}
         </div>
-        <div>
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Czy mogę udostępnić stronę pamięci rodzinie?</h2>
-          <p className="text-gray-600 dark:text-gray-400">Tak, możesz wygenerować link lub kod QR i podzielić się nim z rodziną i przyjaciółmi.</p>
-        </div>
-        <div>
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Jak mogę edytować dane strony pamięci?</h2>
-          <p className="text-gray-600 dark:text-gray-400">Po zalogowaniu się do swojego konta, przejdź do zakładki „Twoje pamiątki” i wybierz stronę, którą chcesz edytować.</p>
-        </div>
-      </div>
+      </section>
     </main>
   );
-};
-
-export default FAQPage;
+}

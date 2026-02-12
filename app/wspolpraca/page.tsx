@@ -2,9 +2,10 @@ import Link from "next/link";
 
 export default function WspolpracaPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
-      <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h1 className="text-4xl font-bold text-[var(--foreground)]">Zaproszenie do współpracy</h1>
+    <main className="page-shell max-w-5xl">
+      <section className="panel p-8">
+        <span className="eyebrow">Współpraca B2B</span>
+        <h1 className="section-title mt-4 text-4xl">Zaproszenie do współpracy</h1>
         <p className="mt-5 text-gray-700 dark:text-gray-300">
           Dla Bliskich zaprasza firmy i organizacje do oferowania nowoczesnych form
           upamiętnienia: eleganckich kodów QR, które pozwalają zachować wspomnienia,
@@ -16,8 +17,8 @@ export default function WspolpracaPage() {
         </p>
       </section>
 
-      <section className="mt-8 rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h2 className="text-2xl font-semibold text-[var(--foreground)]">Zarejestruj swoją firmę</h2>
+      <section className="panel mt-8 p-8">
+        <h2 className="section-title text-2xl">Zarejestruj swoją firmę</h2>
         <p className="mt-3 text-gray-700 dark:text-gray-300">
           Jeśli chcesz dołączyć do grona partnerów Dla Bliskich, wypełnij krótki formularz
           rejestracyjny.
@@ -38,8 +39,8 @@ export default function WspolpracaPage() {
         </div>
       </section>
 
-      <section className="mt-8 rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h2 className="text-2xl font-semibold text-[var(--foreground)]">Potrzebujesz więcej informacji?</h2>
+      <section className="panel mt-8 p-8">
+        <h2 className="section-title text-2xl">Potrzebujesz więcej informacji?</h2>
         <p className="mt-3 text-gray-700 dark:text-gray-300">
           Odpowiemy na pytania dotyczące współpracy, materiałów, kosztów i możliwości
           personalizacji.

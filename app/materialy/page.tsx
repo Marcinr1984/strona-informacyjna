@@ -56,9 +56,10 @@ const materials = [
 
 export default function MaterialyPage() {
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h1 className="text-4xl font-bold text-[var(--foreground)]">
+    <main className="page-shell">
+      <section className="panel p-8">
+        <span className="eyebrow">Materiały</span>
+        <h1 className="section-title mt-4 text-4xl">
           Materiały graweru kodu QR
         </h1>
         <p className="mt-4 text-gray-700 dark:text-gray-300">
@@ -71,9 +72,9 @@ export default function MaterialyPage() {
         {materials.map((material) => (
           <article
             key={material.title}
-            className="rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900/50"
+            className="panel p-6"
           >
-            <h2 className="text-xl font-semibold text-[var(--foreground)]">
+            <h2 className="section-title text-xl">
               <span className="mr-2">{material.icon}</span>
               {material.title}
             </h2>
@@ -86,8 +87,8 @@ export default function MaterialyPage() {
         ))}
       </section>
 
-      <section className="mt-8 rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h3 className="text-2xl font-semibold text-[var(--foreground)]">
+      <section className="panel mt-8 p-8">
+        <h3 className="section-title text-2xl">
           Galerie realizacji
         </h3>
         <p className="mt-3 text-gray-700 dark:text-gray-300">

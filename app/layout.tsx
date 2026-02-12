@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import InfoBar from "../components/InfoBar";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 import ThemeProvider from "../components/ThemeProvider";
@@ -30,12 +28,10 @@ export default function RootLayout({
   return (
     <html lang="pl" className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300 overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen overflow-x-hidden antialiased transition-colors duration-300`}
       >
         <ThemeProvider />
-        <InfoBar />
         <Menu />
-        <Header />
         <main className="w-full">{children}</main>
         <Footer />
       </body>

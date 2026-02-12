@@ -1,41 +1,47 @@
 const SliderSection = () => {
   return (
     <section
-      className="relative text-white py-20 transition-colors duration-200"
+      className="relative overflow-hidden py-20 text-white transition-colors duration-200 sm:py-24"
       style={{
         backgroundImage: "url('/slider-bg.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center 35%",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div
-        className="absolute inset-0"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
-      />
-      <div className="relative z-10 mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-prose text-center transition-colors duration-200 relative">
-          <div>
-            <h1 className="text-4xl font-bold sm:text-5xl drop-shadow-md leading-tight max-w-xl mx-auto">
-              Witaj na stronie
-              <br />
-              <span style={{ color: "var(--color-sky-500)" }}>Dla Bliskich</span>
-            </h1>
+      <div className="absolute inset-0 bg-slate-950/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-900/40 to-transparent" />
 
-            <p className="mt-4 text-base text-pretty text-gray-100 sm:text-lg/relaxed drop-shadow">
-              Tworzymy cyfrowe miejsca pamięci, które pozwalają dzielić się wspomnieniami, zdjęciami i historią Twoich bliskich.
-            </p>
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl">
+          <span className="inline-flex rounded-full border border-sky-300/40 bg-sky-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-100">
+            Cyfrowa pamięć pokoleń
+          </span>
+          <h1 className="mt-5 text-4xl font-bold leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
+            Upamiętnij bliskich
+            <br />
+            <span className="text-sky-300">godnie i nowocześnie</span>
+          </h1>
 
-            <div className="mt-6 flex justify-center gap-4 sm:mt-8">
-              <a
-                className="inline-block rounded px-5 py-3 font-medium text-white shadow-sm transition-colors hover:opacity-90"
-                style={{ backgroundColor: "var(--color-sky-500)", border: "1px solid var(--color-sky-500)" }}
-                href="#"
-              >
-                Zamów tabliczkę z kodem QR
-              </a>
-            </div>
-          </div> {/* koniec .text-center */}
+          <p className="mt-5 max-w-2xl text-base text-gray-100/95 sm:text-lg">
+            Tworzymy kody QR i strony pamięci, które pomagają rodzinom zachować historie,
+            zdjęcia i wspomnienia na lata.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              className="inline-flex rounded-lg bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-600"
+              href="https://qr.dlabliskich.pl/auth/register"
+            >
+              Zamów kod QR
+            </a>
+            <a
+              className="inline-flex rounded-lg border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+              href="/jak-to-dziala"
+            >
+              Zobacz jak to działa
+            </a>
+          </div>
         </div>
       </div>
     </section>

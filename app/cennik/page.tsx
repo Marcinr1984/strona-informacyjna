@@ -45,9 +45,10 @@ const plans = [
 
 export default function CennikPage() {
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <section className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-bold text-[var(--foreground)] transition-colors duration-300 sm:text-5xl">
+    <main className="page-shell">
+      <section className="panel mx-auto max-w-3xl p-8 text-center">
+        <span className="eyebrow">Oferta</span>
+        <h1 className="section-title mt-4 text-4xl transition-colors duration-300 sm:text-5xl">
           Cennik
         </h1>
         <p className="mt-4 text-base text-gray-700 transition-colors duration-300 dark:text-gray-300 sm:text-lg">
@@ -60,10 +61,10 @@ export default function CennikPage() {
         {plans.map((plan) => (
           <article
             key={plan.name}
-            className={`rounded-2xl border p-6 shadow-sm transition-colors duration-300 ${
+            className={`panel p-6 transition-colors duration-300 ${
               plan.highlighted
-                ? "border-sky-500 bg-sky-50/60 dark:border-sky-400 dark:bg-sky-950/30"
-                : "border-gray-200 bg-white/80 dark:border-gray-700 dark:bg-gray-900/40"
+                ? "border-sky-500 bg-sky-50/65 dark:border-sky-400 dark:bg-sky-950/30"
+                : ""
             }`}
           >
             {plan.highlighted && (

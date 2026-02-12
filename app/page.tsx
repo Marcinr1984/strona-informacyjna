@@ -43,25 +43,26 @@ export default function Home() {
   return (
     <>
       <SliderSection />
-      <main className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-          <h1 className="text-3xl font-bold text-[var(--foreground)] sm:text-4xl">
+      <main className="page-shell">
+        <section className="panel p-8 sm:p-10">
+          <span className="eyebrow">Start</span>
+          <h1 className="section-title mt-4 text-3xl sm:text-4xl">
             Cyfrowe wspomnienia w godnej formie
           </h1>
-          <p className="mt-4 max-w-3xl text-gray-700 dark:text-gray-300">
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-700 dark:text-gray-300">
             Strona główna pokazuje najważniejsze informacje, a pełne opisy znajdziesz w
             dedykowanych zakładkach. Dzięki temu całość jest czytelna i bardziej profesjonalna.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/jak-to-dziala"
-              className="inline-flex rounded-lg bg-sky-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-600"
+              className="inline-flex rounded-lg bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-700"
             >
               Zobacz jak to działa
             </Link>
             <Link
               href="/kontakt"
-              className="inline-flex rounded-lg border border-gray-300 px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800"
+              className="inline-flex rounded-lg border border-[var(--surface-border)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-slate-100 dark:hover:bg-slate-800/60"
             >
               Skontaktuj się z nami
             </Link>
@@ -72,13 +73,13 @@ export default function Home() {
           {sections.map((section) => (
             <article
               key={section.href}
-              className="rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-900/50"
+              className="panel p-6 transition-transform duration-200 hover:-translate-y-1"
             >
-              <h2 className="text-xl font-semibold text-[var(--foreground)]">{section.title}</h2>
+              <h2 className="section-title text-xl">{section.title}</h2>
               <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{section.description}</p>
               <Link
                 href={section.href}
-                className="mt-5 inline-flex text-sm font-semibold text-sky-600 transition-colors hover:text-sky-500 dark:text-sky-400"
+                className="brand-link mt-5 inline-flex text-sm"
               >
                 Przejdź do sekcji →
               </Link>

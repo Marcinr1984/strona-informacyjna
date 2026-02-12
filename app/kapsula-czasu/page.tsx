@@ -8,9 +8,10 @@ function PhotoPlaceholder({ label }: { label: string }) {
 
 export default function KapsulaCzasuPage() {
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h1 className="text-4xl font-bold text-[var(--foreground)]">Kapsuła czasu</h1>
+    <main className="page-shell">
+      <section className="panel p-8">
+        <span className="eyebrow">Kapsuła czasu</span>
+        <h1 className="section-title mt-4 text-4xl">Kapsuła czasu</h1>
         <p className="mt-5 text-gray-700 dark:text-gray-300">
           Kapsuła czasu to miejsce, w którym wspomnienia mogą przetrwać przez pokolenia.
           Tworzysz zdjęcia, historie, cytaty i linki do filmów, które będą dostępne dla
@@ -23,8 +24,8 @@ export default function KapsulaCzasuPage() {
       </section>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-2">
-        <article className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-          <h2 className="text-2xl font-semibold text-[var(--foreground)]">
+        <article className="panel p-8">
+          <h2 className="section-title text-2xl">
             Dodatkowa usługa: wizytówka z kodem QR
           </h2>
           <p className="mt-3 text-gray-700 dark:text-gray-300">
@@ -39,8 +40,8 @@ export default function KapsulaCzasuPage() {
           <PhotoPlaceholder label="Miejsce na poglądowy projekt/fotografię wizytówki z kodem QR" />
         </article>
 
-        <article className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-          <h2 className="text-2xl font-semibold text-[var(--foreground)]">Bezpieczeństwo wspomnień</h2>
+        <article className="panel p-8">
+          <h2 className="section-title text-2xl">Bezpieczeństwo wspomnień</h2>
           <p className="mt-3 text-gray-700 dark:text-gray-300">
             Wszystkie informacje tworzone w konfiguratorze przechowujemy w bezpieczny i
             poufny sposób. Dostęp mają wyłącznie osoby upoważnione: Ty oraz wskazany opiekun.

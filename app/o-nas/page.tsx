@@ -23,9 +23,10 @@ const benefits = [
 
 export default function ONasPage() {
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-        <h1 className="text-4xl font-bold text-[var(--foreground)]">Kim jesteśmy</h1>
+    <main className="page-shell">
+      <section className="panel p-8">
+        <span className="eyebrow">O nas</span>
+        <h1 className="section-title mt-4 text-4xl">Kim jesteśmy</h1>
         <div className="mt-5 space-y-4 text-gray-700 dark:text-gray-300">
           <p>
             Pamięć o bliskich to coś więcej niż imię wyryte w kamieniu. To historie, uśmiechy,
@@ -49,8 +50,8 @@ export default function ONasPage() {
       </section>
 
       <section className="mt-8 grid gap-6 lg:grid-cols-2">
-        <article className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-          <h2 className="text-2xl font-semibold text-[var(--foreground)]">Co zawiera strona pamięci</h2>
+        <article className="panel p-8">
+          <h2 className="section-title text-2xl">Co zawiera strona pamięci</h2>
           <ul className="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
             {memoryFeatures.map((item) => (
               <li key={item} className="flex items-start gap-2">
@@ -59,7 +60,7 @@ export default function ONasPage() {
               </li>
             ))}
           </ul>
-          <h3 className="mt-6 text-xl font-semibold text-[var(--foreground)]">Dlaczego warto</h3>
+          <h3 className="section-title mt-6 text-xl">Dlaczego warto</h3>
           <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
             {benefits.map((item) => (
               <li key={item} className="flex items-start gap-2">
@@ -70,8 +71,8 @@ export default function ONasPage() {
           </ul>
         </article>
 
-        <article className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
-          <h3 className="text-2xl font-semibold text-[var(--foreground)]">Materiały wizualne</h3>
+        <article className="panel p-8">
+          <h3 className="section-title text-2xl">Materiały wizualne</h3>
           <p className="mt-3 text-gray-700 dark:text-gray-300">
             W tej sekcji umieścimy fotografie, które wzmacniają przekaz: kod QR na nagrobku
             oraz osobę korzystającą z rozwiązania.

@@ -1,13 +1,13 @@
 export default function KontaktPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center text-[var(--foreground)] transition-colors duration-300">
-        Kontakt
-      </h1>
+    <main className="page-shell max-w-4xl">
+      <section className="panel p-8">
+        <span className="eyebrow">Kontakt</span>
+        <h1 className="section-title mt-4 text-center text-4xl transition-colors duration-300">
+          Kontakt
+        </h1>
 
-      <form
-        className="mt-10 max-w-xl mx-auto rounded-xl bg-[var(--primary-light)] dark:bg-transparent p-8 space-y-6 transition-colors duration-300"
-      >
+      <form className="mt-10 mx-auto max-w-xl space-y-6 rounded-xl bg-[var(--primary-light)] p-8 transition-colors duration-300 dark:bg-transparent">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div className="space-y-2">
             <label htmlFor="name" className="block text-sm font-medium text-[var(--foreground)] transition-colors duration-300">
@@ -55,6 +55,7 @@ export default function KontaktPage() {
           </button>
         </div>
       </form>
+      </section>
     </main>
   )
 }

@@ -3,47 +3,50 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--footer-background)] text-[var(--foreground)] transition-colors duration-300 rounded-lg shadow-none">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <Link href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+    <footer className="mt-16 border-t border-[var(--surface-border)] bg-[var(--footer-background)] text-[var(--foreground)] transition-colors duration-300">
+      <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--foreground)] transition-colors duration-300">DlaBliskich</span>
+            <span className="self-center whitespace-nowrap text-2xl font-semibold text-[var(--foreground)] transition-colors duration-300">DlaBliskich</span>
           </Link>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-[var(--foreground)] sm:mb-0 transition-colors duration-300">
+          <ul className="grid grid-cols-2 gap-x-5 gap-y-2 text-sm font-medium text-[var(--foreground)] transition-colors duration-300 sm:grid-cols-4 lg:grid-cols-5">
             <li>
-              <Link href="/" className="hover:underline me-4 md:me-6">Strona główna</Link>
+              <Link href="/" className="hover:underline">Strona główna</Link>
             </li>
             <li>
-              <Link href="/o-nas" className="hover:underline me-4 md:me-6">O nas</Link>
+              <Link href="/o-nas" className="hover:underline">O nas</Link>
             </li>
             <li>
-              <Link href="/jak-to-dziala" className="hover:underline me-4 md:me-6">Jak to działa</Link>
+              <Link href="/jak-to-dziala" className="hover:underline">Jak to działa</Link>
             </li>
             <li>
-              <Link href="/materialy" className="hover:underline me-4 md:me-6">Materiały</Link>
+              <Link href="/materialy" className="hover:underline">Materiały</Link>
             </li>
             <li>
-              <Link href="/cennik" className="hover:underline me-4 md:me-6">Cennik</Link>
+              <Link href="/cennik" className="hover:underline">Cennik</Link>
             </li>
             <li>
-              <Link href="/wspolpraca" className="hover:underline me-4 md:me-6">Współpraca</Link>
+              <Link href="/wspolpraca" className="hover:underline">Współpraca</Link>
             </li>
             <li>
-              <Link href="/kapsula-czasu" className="hover:underline me-4 md:me-6">Kapsuła czasu</Link>
+              <Link href="/kapsula-czasu" className="hover:underline">Kapsuła czasu</Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:underline me-4 md:me-6">FAQ</Link>
+              <Link href="/faq" className="hover:underline">FAQ</Link>
             </li>
             <li>
               <Link href="/kontakt" className="hover:underline">Kontakt</Link>
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 transition-colors duration-300" />
-        <span className="block text-sm text-[var(--foreground)] sm:text-center transition-colors duration-300">
-          © 2025 <Link href="/" className="hover:underline">DlaBliskich™</Link>. Wszelkie prawa zastrzeżone.
-        </span>
+        <hr className="my-7 border-gray-200 transition-colors duration-300 dark:border-gray-700" />
+        <div className="flex flex-col gap-2 text-sm text-[var(--foreground)]/80 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
+          </span>
+          <span>kontakt@dlabliskich.pl</span>
+        </div>
       </div>
     </footer>
   )

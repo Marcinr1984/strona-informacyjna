@@ -34,13 +34,13 @@ useEffect(() => {
 }, [])
 
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--menu-background)] text-[var(--foreground)] shadow-none transition-colors duration-300">
-      <div className="w-full flex flex-wrap items-center justify-between p-4 px-12">
+    <nav className="sticky top-0 z-50 border-b border-[var(--surface-border)] bg-[var(--menu-background)]/95 text-[var(--foreground)] backdrop-blur-xl transition-colors duration-300">
+      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} priority />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-[var(--foreground)]">DlaBliskich</span>
+          <span className="self-center whitespace-nowrap text-xl font-semibold text-[var(--foreground)] sm:text-2xl">DlaBliskich</span>
         </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div className="flex items-center gap-1 md:order-2 md:gap-2 rtl:space-x-reverse">
           <button
             onClick={() => {
               const htmlEl = document.documentElement
@@ -56,7 +56,7 @@ useEffect(() => {
             }}
             role="button"
             aria-label="Change theme"
-            className="theme-toggle dark:text-sky-500 text-sky-500 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
+            className="theme-toggle rounded-lg p-2 text-sky-600 transition-colors hover:bg-gray-100 dark:text-sky-400 dark:hover:bg-gray-800"
           >
             {isDarkMode ? (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -70,20 +70,20 @@ useEffect(() => {
           </button>
           <a
             href="https://qr.dlabliskich.pl/auth/login"
-            className="text-[var(--foreground)] hover:text-cyan-400 text-sm font-medium px-4 py-2.5 transition-colors"
+            className="hidden rounded-lg px-3 py-2 text-sm font-medium text-[var(--foreground)] transition-colors hover:bg-gray-100 hover:text-sky-600 md:inline-flex dark:hover:bg-gray-800"
           >
             Zaloguj się
           </a>
           <a
             href="https://qr.dlabliskich.pl/auth/register"
-            className="register-button bg-[#1e293b] hover:bg-[#334155] text-white font-medium rounded-full text-sm px-6 py-2.5 text-center transition-colors"
+            className="hidden rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-sky-700 md:inline-flex"
           >
             Załóż konto
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-cta"
             aria-expanded={isOpen}
           >
@@ -93,8 +93,8 @@ useEffect(() => {
             </svg>
           </button>
         </div>
-        <div className={`${isOpen ? 'block' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1`} id="navbar-cta">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[var(--foreground)] rounded-lg bg-[var(--menu-background)] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[var(--menu-background)] transition-colors duration-300">
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full items-center justify-between md:order-1 md:flex md:w-auto`} id="navbar-cta">
+          <ul className="mt-3 flex flex-col gap-1 rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-3 font-medium shadow-sm md:mt-0 md:flex-row md:gap-6 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
             {[
               { href: '/', label: 'Start' },
               { href: '/o-nas', label: 'O nas' },
@@ -102,6 +102,7 @@ useEffect(() => {
               { href: '/materialy', label: 'Materiały' },
               { href: '/cennik', label: 'Cennik' },
               { href: '/wspolpraca', label: 'Współpraca' },
+              { href: '/kapsula-czasu', label: 'Kapsuła czasu' },
               { href: '/kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => {
               const isActive = pathname === href
@@ -109,10 +110,10 @@ useEffect(() => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className={`block py-2 px-3 md:p-0 rounded-sm ${
+                    className={`block rounded-md px-3 py-2 text-sm transition-colors md:px-0 ${
                       isActive
-                        ? 'text-cyan-400 bg-transparent md:bg-transparent md:text-cyan-400 md:dark:text-cyan-400'
-                        : 'text-[var(--foreground)] hover:text-cyan-400 transition-colors'
+                        ? 'text-sky-600 md:text-sky-600 dark:text-sky-400'
+                        : 'text-[var(--foreground)] hover:text-sky-600 dark:hover:text-sky-400'
                     }`}
                     aria-current={isActive ? 'page' : undefined}
                   >
