@@ -27,14 +27,15 @@ export default function Menu() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="w-full border-b border-white/18 bg-slate-950/30 text-white backdrop-blur-xl">
-        <div className="flex w-full items-center justify-between gap-4 px-5 py-3 lg:px-8 xl:px-12">
+      <div className="relative w-full overflow-hidden border-b border-white/20 bg-slate-950/20 text-white backdrop-blur-2xl">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
+        <div className="relative flex w-full items-center justify-between gap-4 px-5 py-3 lg:px-8 xl:px-12">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
             <span className="text-2xl font-semibold">DlaBliskich</span>
           </Link>
 
-          <nav className="hidden flex-1 items-center justify-center gap-8 px-6 text-sm lg:flex">
+          <nav className="ml-auto hidden items-center gap-7 px-4 text-[15px] font-medium lg:flex">
             {NAV_LINKS.map((link) => {
               const active = pathname === link.href
               return (
@@ -50,7 +51,7 @@ export default function Menu() {
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
-            <span className="mx-2 h-7 w-px bg-white/45" />
+            <span className="mx-2 h-8 w-px bg-white/55" />
             <a
               href="https://qr.dlabliskich.pl/auth/login"
               className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/12"
