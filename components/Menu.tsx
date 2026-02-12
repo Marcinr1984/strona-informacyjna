@@ -32,7 +32,7 @@ export default function Menu() {
         className={`relative w-full overflow-hidden border-b text-white ${
           isHome
             ? 'border-white/20 bg-slate-950/20 backdrop-blur-2xl'
-            : 'border-[#0f2b52] bg-[#041634]'
+            : 'border-[#1b2940] bg-[rgb(11,20,38)]'
         }`}
       >
         {isHome && (
@@ -100,7 +100,9 @@ export default function Menu() {
           <div
             id="mobile-menu"
             className={`border-t px-4 py-3 lg:hidden ${
-              isHome ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl' : 'border-[#0f2b52] bg-[#041634]'
+              isHome
+                ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl'
+                : 'border-[#1b2940] bg-[rgb(11,20,38)]'
             }`}
           >
             <nav className="grid gap-2 text-sm">
