@@ -19,6 +19,7 @@ const NAV_LINKS = [
 export default function Menu() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const isHome = pathname === '/'
 
   useEffect(() => {
     document.documentElement.classList.remove('dark')
@@ -27,11 +28,26 @@ export default function Menu() {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="relative w-full overflow-hidden border-b border-white/20 bg-slate-950/20 text-white backdrop-blur-2xl">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
-        <div className="relative flex w-full items-center justify-between gap-4 px-5 py-4 lg:px-8 xl:px-12">
+      <div
+        className={`relative w-full overflow-hidden border-b text-white ${
+          isHome
+            ? 'border-white/20 bg-slate-950/20 backdrop-blur-2xl'
+            : 'border-[#0f2b52] bg-[#041634]'
+        }`}
+      >
+        {isHome && (
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
+        )}
+        <div className="relative flex w-full items-center justify-between gap-4 px-5 py-5 lg:px-8 xl:px-12">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
+            <Image
+              src="/logo-dlabliskich.svg"
+              alt="DlaBliskich"
+              width={140}
+              height={32}
+              className="h-8 w-auto [filter:brightness(0)_invert(1)]"
+              priority
+            />
             <span className="text-2xl font-semibold">DlaBliskich</span>
           </Link>
 
@@ -54,13 +70,13 @@ export default function Menu() {
             <span className="mx-2 h-8 w-px bg-white/55" />
             <a
               href="https://qr.dlabliskich.pl/auth/login"
-              className="rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/12"
+              className="rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/12"
             >
               Zaloguj sie
             </a>
             <a
               href="https://qr.dlabliskich.pl/auth/register"
-              className="rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Zaloz konto
             </a>
@@ -81,7 +97,12 @@ export default function Menu() {
         </div>
 
         {isOpen && (
-          <div id="mobile-menu" className="border-t border-white/20 bg-slate-950/38 px-4 py-3 backdrop-blur-xl lg:hidden">
+          <div
+            id="mobile-menu"
+            className={`border-t px-4 py-3 lg:hidden ${
+              isHome ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl' : 'border-[#0f2b52] bg-[#041634]'
+            }`}
+          >
             <nav className="grid gap-2 text-sm">
               {NAV_LINKS.map((link) => {
                 const active = pathname === link.href
