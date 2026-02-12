@@ -70,8 +70,7 @@ export default function Home() {
       <SliderSection />
       <main className="page-shell">
         <section className="panel p-8 sm:p-10">
-          <span className="eyebrow">Start</span>
-          <h1 className="section-title mt-4 text-3xl sm:text-4xl">
+          <h1 className="section-title text-3xl sm:text-4xl">
             Cyfrowe wspomnienia w godnej formie
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-700">

@@ -16,6 +16,9 @@ const LABELS: Record<string, string> = {
 
 export default function Breadcrumbs() {
   const pathname = usePathname()
+  if (pathname === '/') {
+    return null
+  }
   const parts = pathname.split('/').filter(Boolean)
 
   return (

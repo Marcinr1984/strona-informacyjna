@@ -31,14 +31,15 @@ export default function JakToDzialaPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <div className="icon-chip">
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="12" cy="12" r="8" />
-            <path d="m14.5 9.5-2 5-5 2 2-5 5-2Z" />
-          </svg>
+        <div className="flex items-center gap-3">
+          <div className="icon-chip">
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="8" />
+              <path d="m14.5 9.5-2 5-5 2 2-5 5-2Z" />
+            </svg>
+          </div>
+          <h1 className="section-title text-4xl">Jak to dziala</h1>
         </div>
-        <span className="eyebrow mt-4">Proces</span>
-        <h1 className="section-title mt-4 text-4xl">Jak to działa</h1>
         <p className="mt-4 text-gray-700">
           Cały proces zaprojektowaliśmy tak, aby był prosty, bezpieczny i wygodny dla rodzin.
         </p>

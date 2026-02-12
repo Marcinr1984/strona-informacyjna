@@ -10,30 +10,27 @@ export default function Footer() {
             <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} />
             <span className="self-center whitespace-nowrap text-2xl font-semibold text-[var(--foreground)] transition-colors duration-300">DlaBliskich</span>
           </Link>
-          <ul className="grid grid-cols-2 gap-x-5 gap-y-2 text-sm font-medium text-[var(--foreground)] transition-colors duration-300 sm:grid-cols-4 lg:grid-cols-5">
+          <ul className="flex flex-nowrap items-center gap-7 overflow-x-auto whitespace-nowrap text-sm font-medium text-[var(--foreground)] transition-colors duration-300">
             <li>
-              <Link href="/" className="hover:underline">Strona główna</Link>
+              <Link href="/" className="hover:underline">Start</Link>
             </li>
             <li>
               <Link href="/o-nas" className="hover:underline">O nas</Link>
             </li>
             <li>
-              <Link href="/jak-to-dziala" className="hover:underline">Jak to działa</Link>
+              <Link href="/jak-to-dziala" className="hover:underline">Jak to dziala</Link>
             </li>
             <li>
-              <Link href="/materialy" className="hover:underline">Materiały</Link>
+              <Link href="/materialy" className="hover:underline">Materialy</Link>
             </li>
             <li>
               <Link href="/cennik" className="hover:underline">Cennik</Link>
             </li>
             <li>
-              <Link href="/wspolpraca" className="hover:underline">Współpraca</Link>
+              <Link href="/wspolpraca" className="hover:underline">Wspolpraca</Link>
             </li>
             <li>
-              <Link href="/kapsula-czasu" className="hover:underline">Kapsuła czasu</Link>
-            </li>
-            <li>
-              <Link href="/faq" className="hover:underline">FAQ</Link>
+              <Link href="/kapsula-czasu" className="hover:underline">Kapsula czasu</Link>
             </li>
             <li>
               <Link href="/kontakt" className="hover:underline">Kontakt</Link>

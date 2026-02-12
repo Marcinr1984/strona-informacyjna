@@ -4,16 +4,17 @@ export default function WspolpracaPage() {
   return (
     <main className="page-shell max-w-5xl">
       <section className="panel p-8">
-        <div className="icon-chip">
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="3" />
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a3 3 0 0 1 0 5.74" />
-          </svg>
+        <div className="flex items-center gap-3">
+          <div className="icon-chip">
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="3" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a3 3 0 0 1 0 5.74" />
+            </svg>
+          </div>
+          <h1 className="section-title text-4xl">Zaproszenie do wspolpracy</h1>
         </div>
-        <span className="eyebrow mt-4">Współpraca B2B</span>
-        <h1 className="section-title mt-4 text-4xl">Zaproszenie do współpracy</h1>
         <p className="mt-5 text-gray-700">
           Dla Bliskich zaprasza firmy i organizacje do oferowania nowoczesnych form
           upamiętnienia: eleganckich kodów QR, które pozwalają zachować wspomnienia,

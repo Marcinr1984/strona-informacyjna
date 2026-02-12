@@ -58,17 +58,18 @@ export default function MaterialyPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <div className="icon-chip">
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="m12 3 9 5-9 5-9-5 9-5Z" />
-            <path d="m3 12 9 5 9-5" />
-            <path d="m3 16 9 5 9-5" />
-          </svg>
+        <div className="flex items-center gap-3">
+          <div className="icon-chip">
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+              <path d="m3 12 9 5 9-5" />
+              <path d="m3 16 9 5 9-5" />
+            </svg>
+          </div>
+          <h1 className="section-title text-4xl">
+            Materialy graweru kodu QR
+          </h1>
         </div>
-        <span className="eyebrow mt-4">Materiały</span>
-        <h1 className="section-title mt-4 text-4xl">
-          Materiały graweru kodu QR
-        </h1>
         <p className="mt-4 text-gray-700">
           Wybierz materiał dopasowany do stylu nagrobka i oczekiwanego efektu wizualnego.
           Każda opcja łączy trwałość z estetyką i czytelnością kodu.
