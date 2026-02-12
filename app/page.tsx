@@ -69,26 +69,52 @@ export default function Home() {
     <>
       <SliderSection />
       <main className="page-shell">
-        <section className="panel p-8 sm:p-10">
+        <section className="panel p-8 text-center sm:p-10">
           <h1 className="section-title text-3xl sm:text-4xl">
-            Cyfrowe wspomnienia w godnej formie
+            Stwórz stronę pamięci w kilku prostych krokach
           </h1>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-gray-700">
-            Strona główna pokazuje najważniejsze informacje, a pełne opisy znajdziesz w
-            dedykowanych zakładkach. Dzięki temu całość jest czytelna i bardziej profesjonalna.
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-gray-700">
+            Prosty proces, który pozwala szybko utworzyć miejsce wspomnień, dodać treści i udostępnić je bliskim.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
+
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">1</div>
+              <h2 className="section-title mt-4 text-2xl text-cyan-600">Utwórz stronę</h2>
+              <p className="mt-2 text-base text-gray-700">Dodaj podstawowe informacje i rozpocznij tworzenie historii.</p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">2</div>
+              <h2 className="section-title mt-4 text-2xl text-cyan-600">Dodaj wspomnienia</h2>
+              <p className="mt-2 text-base text-gray-700">Wstaw zdjęcia, filmy i opisy ważnych momentów z życia.</p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">3</div>
+              <h2 className="section-title mt-4 text-2xl text-cyan-600">Udostępnij bliskim</h2>
+              <p className="mt-2 text-base text-gray-700">Połącz stronę z kodem QR i umożliw odwiedziny każdemu.</p>
+            </article>
+          </div>
+
+          <div className="mx-auto mt-7 hidden max-w-4xl items-center justify-between px-10 md:flex">
+            <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
+            <span className="h-px flex-1 bg-cyan-300" />
+            <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
+            <span className="h-px flex-1 bg-cyan-300" />
+            <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
+          </div>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link
-              href="/jak-to-dziala"
-              className="btn-primary px-5 py-3 text-sm"
+              href="https://qr.dlabliskich.pl/auth/register"
+              className="btn-primary px-7 py-3 text-sm"
             >
-              Zobacz jak to działa
+              Zacznij teraz
             </Link>
             <Link
-              href="/kontakt"
-              className="inline-flex rounded-lg border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-slate-50"
+              href="/jak-to-dziala"
+              className="inline-flex rounded-lg border border-cyan-500 bg-white px-7 py-3 text-sm font-semibold text-cyan-600 transition-colors hover:bg-cyan-50"
             >
-              Skontaktuj się z nami
+              Zobacz wszystkie możliwości
             </Link>
           </div>
         </section>
