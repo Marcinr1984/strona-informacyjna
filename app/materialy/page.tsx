@@ -58,7 +58,13 @@ export default function MaterialyPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <div className="icon-chip">🧱</div>
+        <div className="icon-chip">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+            <path d="m3 12 9 5 9-5" />
+            <path d="m3 16 9 5 9-5" />
+          </svg>
+        </div>
         <span className="eyebrow mt-4">Materiały</span>
         <h1 className="section-title mt-4 text-4xl">
           Materiały graweru kodu QR

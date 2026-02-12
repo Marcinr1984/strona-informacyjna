@@ -3,47 +3,66 @@ import SliderSection from "../components/SliderSection";
 
 const sections = [
   {
-    icon: "💙",
+    icon: "heart",
     title: "O nas",
     description:
       "Poznaj misję Dla Bliskich i dowiedz się, dlaczego tworzymy cyfrowe miejsca pamięci.",
     href: "/o-nas",
   },
   {
-    icon: "🧭",
+    icon: "compass",
     title: "Jak to działa",
     description:
       "Prosty proces w 4 krokach: od stworzenia wspomnień po gotowy kod QR.",
     href: "/jak-to-dziala",
   },
   {
-    icon: "🧱",
+    icon: "layers",
     title: "Materiały graweru",
     description:
       "Sprawdź dostępne formy realizacji: kamień, stal, ceramika, aluminium i szkło.",
     href: "/materialy",
   },
   {
-    icon: "🤝",
+    icon: "users",
     title: "Współpraca B2B",
     description:
       "Oferta dla zakładów kamieniarskich, firm pogrzebowych i partnerów lokalnych.",
     href: "/wspolpraca",
   },
   {
-    icon: "⏳",
+    icon: "clock",
     title: "Kapsuła czasu",
     description:
       "Nowoczesny sposób zabezpieczenia historii życia i przekazania ich kolejnym pokoleniom.",
     href: "/kapsula-czasu",
   },
   {
-    icon: "💳",
+    icon: "tag",
     title: "Cennik",
     description: "Przejrzyste pakiety i zakresy usług dla klientów indywidualnych i rodzin.",
     href: "/cennik",
   },
 ];
+
+function SectionIcon({ type }: { type: string }) {
+  if (type === "heart") {
+    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M12 21s-6.7-4.35-9.33-8.23C.65 9.8 2.04 5.5 6 5.5c2.07 0 3.24 1.18 4 2.2.76-1.02 1.93-2.2 4-2.2 3.96 0 5.35 4.3 3.33 7.27C18.7 16.65 12 21 12 21Z"/></svg>;
+  }
+  if (type === "compass") {
+    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="8"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg>;
+  }
+  if (type === "layers") {
+    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg>;
+  }
+  if (type === "users") {
+    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a3 3 0 0 1 0 5.74"/></svg>;
+  }
+  if (type === "clock") {
+    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>;
+  }
+  return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M9 12h6"/><path d="M12 3v9"/></svg>;
+}
 
 export default function Home() {
   return (
@@ -81,7 +100,7 @@ export default function Home() {
               key={section.href}
               className="panel p-6 transition-transform duration-200 hover:-translate-y-1"
             >
-              <div className="icon-chip">{section.icon}</div>
+              <div className="icon-chip"><SectionIcon type={section.icon} /></div>
               <h2 className="section-title mt-4 text-xl">{section.title}</h2>
               <p className="mt-3 text-sm text-gray-700">{section.description}</p>
               <Link

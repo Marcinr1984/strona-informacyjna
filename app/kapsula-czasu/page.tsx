@@ -10,7 +10,12 @@ export default function KapsulaCzasuPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
-        <div className="icon-chip">⏳</div>
+        <div className="icon-chip">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v6l4 2" />
+          </svg>
+        </div>
         <span className="eyebrow mt-4">Kapsuła czasu</span>
         <h1 className="section-title mt-4 text-4xl">Kapsuła czasu</h1>
         <p className="mt-5 text-gray-700">

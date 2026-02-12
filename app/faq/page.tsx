@@ -25,7 +25,13 @@ export default function FAQPage() {
   return (
     <main className="page-shell max-w-4xl">
       <section className="panel p-8">
-        <div className="icon-chip">❓</div>
+        <div className="icon-chip">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.7 1.2-1.7 2.7" />
+            <circle cx="12" cy="17" r="1" fill="currentColor" stroke="none" />
+          </svg>
+        </div>
         <span className="eyebrow mt-4">FAQ</span>
         <h1 className="section-title mt-4 text-4xl">Najczęściej zadawane pytania</h1>
         <div className="mt-8 space-y-4">

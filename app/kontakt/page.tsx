@@ -2,7 +2,12 @@ export default function KontaktPage() {
   return (
     <main className="page-shell max-w-4xl">
       <section className="panel p-8">
-        <div className="mx-auto icon-chip">✉️</div>
+        <div className="mx-auto icon-chip">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m4 7 8 6 8-6" />
+          </svg>
+        </div>
         <span className="eyebrow mt-4">Kontakt</span>
         <h1 className="section-title mt-4 text-center text-4xl transition-colors duration-300">
           Kontakt

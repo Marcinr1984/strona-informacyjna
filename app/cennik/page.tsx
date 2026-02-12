@@ -47,7 +47,13 @@ export default function CennikPage() {
   return (
     <main className="page-shell">
       <section className="panel mx-auto max-w-3xl p-8 text-center">
-        <div className="mx-auto icon-chip">💳</div>
+        <div className="mx-auto icon-chip">
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7" />
+            <path d="M9 12h6" />
+            <path d="M12 3v9" />
+          </svg>
+        </div>
         <span className="eyebrow mt-4">Oferta</span>
         <h1 className="section-title mt-4 text-4xl transition-colors duration-300 sm:text-5xl">
           Cennik
