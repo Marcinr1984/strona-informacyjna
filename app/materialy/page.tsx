@@ -1,0 +1,100 @@
+function PhotoPlaceholder({ label }: { label: string }) {
+  return (
+    <div className="mt-4 flex min-h-44 items-center justify-center rounded-xl border border-dashed border-gray-400/70 bg-gray-100/60 p-6 text-center text-sm text-gray-600 dark:border-gray-600 dark:bg-gray-800/40 dark:text-gray-300">
+      {label}
+    </div>
+  );
+}
+
+const materials = [
+  {
+    icon: "⬛",
+    title: "Kamień naturalny (granit, marmur)",
+    subtitle: "Klasyka i elegancja",
+    description:
+      "Kod QR może być wygrawerowany bezpośrednio w kamieniu lub na osobnej tabliczce kamiennej. Jest odporny na warunki atmosferyczne i harmonijnie wpisuje się w tradycyjny charakter nagrobków.",
+    support:
+      "Polecany dla osób ceniących tradycję, prostotę i minimalizm. Pomagamy znaleźć sprawdzony zakład kamieniarski.",
+  },
+  {
+    icon: "⚙",
+    title: "Stal nierdzewna / stal szlachetna",
+    subtitle: "Nowoczesna elegancja i wyjątkowa trwałość",
+    description:
+      "Grawer na stali nierdzewnej jest odporny na wilgoć i upływ czasu. Daje elegancki, nowoczesny efekt wizualny przy zachowaniu powagi miejsca pamięci.",
+    support:
+      "Możliwe są także indywidualne formy, np. podobizna osoby zmarłej wykonana na podstawie fotografii.",
+  },
+  {
+    icon: "❤",
+    title: "Ceramika / porcelana",
+    subtitle: "Delikatność i subtelność",
+    description:
+      "Ceramiczne tabliczki z wypalanym kodem QR są subtelne i estetyczne. Dobrze komponują się z jasnymi nagrobkami i klasycznym stylem miejsca pamięci.",
+    support:
+      "Usługę realizujemy w ramach naszej oferty lub we własnym zakresie po stronie klienta.",
+  },
+  {
+    icon: "●",
+    title: "Aluminium anodowane",
+    subtitle: "Lekkość i subtelna nowoczesność",
+    description:
+      "Anodowane aluminium daje matową, stonowaną powierzchnię w kolorach czerni lub grafitu. Kod QR jest czytelny, a forma dyskretna i nowoczesna.",
+    support:
+      "Rozwiązanie szczególnie polecane do minimalistycznych i współczesnych projektów.",
+  },
+  {
+    icon: "▱",
+    title: "Szkło dymione lub przezroczyste",
+    subtitle: "Subtelność i nowoczesna elegancja",
+    description:
+      "Szkło pozwala stworzyć lekką i delikatną formę upamiętnienia. Wariant dymiony dodaje głębi, a przezroczysty podkreśla czystość i minimalizm projektu.",
+    support:
+      "Realizacja możliwa w naszej ofercie lub we własnym zakresie po stronie klienta.",
+  },
+];
+
+export default function MaterialyPage() {
+  return (
+    <main className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <section className="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
+        <h1 className="text-4xl font-bold text-[var(--foreground)]">
+          Materiały graweru kodu QR
+        </h1>
+        <p className="mt-4 text-gray-700 dark:text-gray-300">
+          Wybierz materiał dopasowany do stylu nagrobka i oczekiwanego efektu wizualnego.
+          Każda opcja łączy trwałość z estetyką i czytelnością kodu.
+        </p>
+      </section>
+
+      <section className="mt-8 grid gap-4 md:grid-cols-2">
+        {materials.map((material) => (
+          <article
+            key={material.title}
+            className="rounded-2xl border border-gray-200 bg-white/90 p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900/50"
+          >
+            <h2 className="text-xl font-semibold text-[var(--foreground)]">
+              <span className="mr-2">{material.icon}</span>
+              {material.title}
+            </h2>
+            <p className="mt-1 text-sm font-medium text-sky-600 dark:text-sky-400">
+              {material.subtitle}
+            </p>
+            <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{material.description}</p>
+            <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">{material.support}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className="mt-8 rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900/50">
+        <h3 className="text-2xl font-semibold text-[var(--foreground)]">
+          Galerie realizacji
+        </h3>
+        <p className="mt-3 text-gray-700 dark:text-gray-300">
+          Przy każdej ofercie umieścimy poglądowe fotografie gotowego produktu.
+        </p>
+        <PhotoPlaceholder label="Miejsce na fotografie realizacji dla każdego materiału" />
+      </section>
+    </main>
+  );
+}

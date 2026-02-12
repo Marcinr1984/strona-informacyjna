@@ -97,9 +97,11 @@ useEffect(() => {
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[var(--foreground)] rounded-lg bg-[var(--menu-background)] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[var(--menu-background)] transition-colors duration-300">
             {[
               { href: '/', label: 'Start' },
+              { href: '/o-nas', label: 'O nas' },
               { href: '/jak-to-dziala', label: 'Jak to działa' },
+              { href: '/materialy', label: 'Materiały' },
               { href: '/cennik', label: 'Cennik' },
-              { href: '/faq', label: 'FAQ' },
+              { href: '/wspolpraca', label: 'Współpraca' },
               { href: '/kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => {
               const isActive = pathname === href

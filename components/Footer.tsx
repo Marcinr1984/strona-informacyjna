@@ -15,10 +15,22 @@ export default function Footer() {
               <Link href="/" className="hover:underline me-4 md:me-6">Strona główna</Link>
             </li>
             <li>
+              <Link href="/o-nas" className="hover:underline me-4 md:me-6">O nas</Link>
+            </li>
+            <li>
               <Link href="/jak-to-dziala" className="hover:underline me-4 md:me-6">Jak to działa</Link>
             </li>
             <li>
+              <Link href="/materialy" className="hover:underline me-4 md:me-6">Materiały</Link>
+            </li>
+            <li>
               <Link href="/cennik" className="hover:underline me-4 md:me-6">Cennik</Link>
+            </li>
+            <li>
+              <Link href="/wspolpraca" className="hover:underline me-4 md:me-6">Współpraca</Link>
+            </li>
+            <li>
+              <Link href="/kapsula-czasu" className="hover:underline me-4 md:me-6">Kapsuła czasu</Link>
             </li>
             <li>
               <Link href="/faq" className="hover:underline me-4 md:me-6">FAQ</Link>
