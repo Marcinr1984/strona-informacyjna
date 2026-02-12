@@ -56,13 +56,13 @@ export default function Home() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/jak-to-dziala"
-              className="inline-flex rounded-lg bg-sky-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-700"
+              className="inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Zobacz jak to działa
             </Link>
             <Link
               href="/kontakt"
-              className="inline-flex rounded-lg border border-[var(--surface-border)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-slate-100 dark:hover:bg-slate-800/60"
+              className="inline-flex rounded-lg border border-slate-200 px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-colors hover:bg-slate-50"
             >
               Skontaktuj się z nami
             </Link>
@@ -76,7 +76,7 @@ export default function Home() {
               className="panel p-6 transition-transform duration-200 hover:-translate-y-1"
             >
               <h2 className="section-title text-xl">{section.title}</h2>
-              <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{section.description}</p>
+              <p className="mt-3 text-sm text-gray-700">{section.description}</p>
               <Link
                 href={section.href}
                 className="brand-link mt-5 inline-flex text-sm"

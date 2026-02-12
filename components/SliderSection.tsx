@@ -9,7 +9,7 @@ const SliderSection = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute inset-0 bg-slate-950/45" />
+      <div className="absolute inset-0 bg-slate-900/35" />
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[1.4rem] border border-slate-200/80 bg-white shadow-[0_18px_40px_rgba(15,23,42,0.2)]">
           <div className="grid md:grid-cols-2">
@@ -36,7 +36,7 @@ const SliderSection = () => {
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 sm:p-10">
+            <div className="bg-white p-8 sm:p-10">
               <h2 className="text-3xl font-semibold text-slate-800">
                 Zacznij teraz
               </h2>
@@ -51,13 +51,13 @@ const SliderSection = () => {
                   Utworz konto
                 </a>
                 <a
-                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100"
+                  className="inline-flex w-full justify-center rounded-lg border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50"
                   href="https://qr.dlabliskich.pl/auth/login"
                 >
                   Zaloguj sie
                 </a>
                 <a
-                  className="inline-flex w-full justify-center rounded-lg border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100"
+                  className="inline-flex w-full justify-center rounded-lg border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50"
                   href="/jak-to-dziala"
                 >
                   Jak to dziala

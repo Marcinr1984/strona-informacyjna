@@ -1,132 +1,129 @@
 'use client'
-import { useState, useEffect } from 'react'
+
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
+
+const NAV_LINKS = [
+  { href: '/', label: 'Start' },
+  { href: '/o-nas', label: 'O nas' },
+  { href: '/jak-to-dziala', label: 'Jak to dziala' },
+  { href: '/materialy', label: 'Materialy' },
+  { href: '/cennik', label: 'Cennik' },
+  { href: '/wspolpraca', label: 'Wspolpraca' },
+  { href: '/kapsula-czasu', label: 'Kapsula czasu' },
+  { href: '/kontakt', label: 'Kontakt' },
+]
 
 export default function Menu() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
 
-useEffect(() => {
-  const theme = localStorage.theme
-
-  if (theme === 'light') {
-    document.documentElement.classList.remove('dark')
-    setIsDarkMode(false)
-  } else if (theme === 'dark') {
-    document.documentElement.classList.add('dark')
-    setIsDarkMode(true)
-  } else {
-    // Domyslnie strona startuje w jasnym motywie.
+  useEffect(() => {
+    // Wymuszamy jasny layout strony informacyjnej, jak w kreatorze.
     document.documentElement.classList.remove('dark')
     localStorage.theme = 'light'
-    setIsDarkMode(false)
-  }
-}, [])
+  }, [])
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-700/70 bg-[var(--menu-background)] text-white transition-colors duration-300">
-      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} priority />
-          <span className="self-center whitespace-nowrap text-xl font-semibold text-white sm:text-2xl">DlaBliskich</span>
-        </Link>
-        <div className="order-3 hidden w-full md:order-2 md:block md:w-auto md:flex-1 md:px-6">
-          <div className="max-w-md">
-            <input
-              type="text"
-              placeholder="Znajdź stronę pamięci lub osobę"
-              className="w-full rounded-xl border border-sky-200/20 bg-slate-900/60 px-4 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
-            />
+    <header className="sticky top-0 z-50">
+      <div className="border-b border-white/10 bg-[#0b1426] text-white">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="/logo-dlabliskich.svg" alt="DlaBliskich" width={140} height={32} className="h-8 w-auto" priority />
+              <span className="text-2xl font-semibold">DlaBliskich</span>
+            </Link>
+            <div className="hidden w-full max-w-md lg:block">
+              <input
+                type="text"
+                placeholder="Znajdz strone pamieci lub osobe"
+                className="w-full rounded-2xl border border-white/15 bg-[#131d33] px-4 py-2.5 text-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-500/70"
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-end gap-2">
+            <a
+              href="https://qr.dlabliskich.pl/auth/login"
+              className="hidden rounded-lg px-3 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 md:inline-flex"
+            >
+              Zaloguj sie
+            </a>
+            <a
+              href="https://qr.dlabliskich.pl/auth/register"
+              className="hidden rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
+            >
+              Zaloz konto
+            </a>
+            <button
+              onClick={() => setIsOpen((prev) => !prev)}
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 bg-[#131d33] text-white md:hidden"
+              aria-label="Otworz menu"
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen}
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div className="flex items-center gap-1 md:order-3 md:gap-2 rtl:space-x-reverse">
-          <button
-            onClick={() => {
-              const htmlEl = document.documentElement
-              if (htmlEl.classList.contains('dark')) {
-                htmlEl.classList.remove('dark')
-                localStorage.theme = 'light'
-                setIsDarkMode(false)
-              } else {
-                htmlEl.classList.add('dark')
-                localStorage.theme = 'dark'
-                setIsDarkMode(true)
-              }
-            }}
-            role="button"
-            aria-label="Change theme"
-            className="theme-toggle rounded-lg p-2 text-sky-300 transition-colors hover:bg-slate-800"
-          >
-            {isDarkMode ? (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-              </svg>
-            )}
-          </button>
-          <a
-            href="https://qr.dlabliskich.pl/auth/login"
-            className="hidden rounded-lg px-3 py-2 text-sm font-medium text-slate-100 transition-colors hover:bg-slate-800 md:inline-flex"
-          >
-            Zaloguj się
-          </a>
-          <a
-            href="https://qr.dlabliskich.pl/auth/register"
-            className="hidden rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
-          >
-            Załóż konto
-          </a>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-slate-300 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-600 md:hidden"
-            aria-controls="navbar-cta"
-            aria-expanded={isOpen}
-          >
-            <span className="sr-only">Otwórz menu główne</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-          </button>
-        </div>
-        <div className={`${isOpen ? 'block' : 'hidden'} order-4 w-full items-center justify-between md:order-1 md:flex md:w-full`} id="navbar-cta">
-          <ul className="mt-3 flex flex-col gap-1 rounded-xl border border-slate-700 bg-slate-900 p-3 font-medium md:mt-0 md:flex-row md:gap-6 md:border-0 md:bg-transparent md:p-0">
-            {[
-              { href: '/', label: 'Start' },
-              { href: '/o-nas', label: 'O nas' },
-              { href: '/jak-to-dziala', label: 'Jak to działa' },
-              { href: '/materialy', label: 'Materiały' },
-              { href: '/cennik', label: 'Cennik' },
-              { href: '/wspolpraca', label: 'Współpraca' },
-              { href: '/kapsula-czasu', label: 'Kapsuła czasu' },
-              { href: '/kontakt', label: 'Kontakt' },
-            ].map(({ href, label }) => {
-              const isActive = pathname === href
+      </div>
+
+      <div className="border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto hidden w-full max-w-7xl items-center justify-between px-4 sm:flex sm:px-6 lg:px-8">
+          <nav className="flex h-12 items-center gap-7 text-sm">
+            {NAV_LINKS.map((link) => {
+              const active = pathname === link.href
               return (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`block rounded-md px-3 py-2 text-sm transition-colors md:px-0 ${
-                      isActive
-                        ? 'text-cyan-300'
-                        : 'text-slate-200 hover:text-cyan-300'
-                    }`}
-                    aria-current={isActive ? 'page' : undefined}
-                  >
-                    {label}
-                  </Link>
-                </li>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative py-2 transition-colors ${
+                    active ? 'font-semibold text-cyan-600' : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                >
+                  {link.label}
+                  {active && (
+                    <span className="absolute inset-x-0 -bottom-[11px] h-[3px] rounded-full bg-gradient-to-r from-cyan-500 via-sky-400 to-rose-400" />
+                  )}
+                </Link>
               )
             })}
-          </ul>
+          </nav>
         </div>
+
+        {isOpen && (
+          <div id="mobile-menu" className="border-t border-slate-200 bg-white px-4 py-3 sm:hidden">
+            <nav className="grid gap-2 text-sm">
+              {NAV_LINKS.map((link) => {
+                const active = pathname === link.href
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`rounded-lg px-3 py-2 ${
+                      active ? 'bg-cyan-50 font-semibold text-cyan-700' : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
+              <a href="https://qr.dlabliskich.pl/auth/login" className="rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-100">
+                Zaloguj sie
+              </a>
+              <a href="https://qr.dlabliskich.pl/auth/register" className="rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-3 py-2 font-semibold text-white">
+                Zaloz konto
+              </a>
+            </nav>
+          </div>
+        )}
       </div>
-    </nav>
+    </header>
   )
 }
