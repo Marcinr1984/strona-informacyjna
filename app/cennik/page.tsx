@@ -46,11 +46,11 @@ const plans = [
 export default function CennikPage() {
   return (
     <main className="page-shell">
-      <section className="panel mx-auto max-w-3xl bg-white p-8 text-center">
+      <section className="panel bg-white p-8 text-center">
         <h2 className="section-title text-4xl transition-colors duration-300 sm:text-5xl">
           Cennik
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-gray-700 transition-colors duration-300 sm:text-lg">
+        <p className="mx-auto mt-4 max-w-4xl text-base text-gray-700 transition-colors duration-300 sm:text-lg">
           Dowiedz się o naszych planach i wybierz pakiet dopasowany do liczby stron oraz
           zakresu wspomnień, które chcesz zachować dla bliskich.
         </p>
