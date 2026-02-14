@@ -1,11 +1,11 @@
 const SliderSection = () => {
   return (
     <section
-      className="relative -mt-[76px] flex min-h-[620px] items-center overflow-hidden pt-[88px] sm:-mt-[84px] sm:min-h-[700px] sm:pt-[96px]"
+      className="relative -mt-[76px] flex min-h-[760px] items-center overflow-hidden pt-[88px] sm:-mt-[84px] sm:min-h-[860px] sm:pt-[96px]"
       style={{
         backgroundImage: "url('/slider-bg.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center 62%",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
