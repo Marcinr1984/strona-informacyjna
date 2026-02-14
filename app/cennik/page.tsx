@@ -61,13 +61,11 @@ export default function CennikPage() {
           <article
             key={plan.name}
               className={`panel relative overflow-visible p-6 transition-colors duration-300 ${
-              plan.highlighted
-                ? "border-sky-500 bg-sky-50/65 pt-10"
-                : ""
-            }`}
+                plan.highlighted ? "border-sky-500 bg-sky-50/65" : ""
+              }`}
           >
             {plan.highlighted && (
-              <p className="absolute -top-4 left-1/2 inline-flex -translate-x-1/2 whitespace-nowrap rounded-full bg-cyan-500 px-5 py-1.5 text-sm font-semibold text-white shadow-sm">
+              <p className="absolute left-1/2 top-0 inline-flex -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-cyan-500 px-5 py-1.5 text-sm font-semibold text-white shadow-sm">
                 Najczęściej wybierany
               </p>
             )}
