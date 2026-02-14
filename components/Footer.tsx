@@ -38,11 +38,10 @@ export default function Footer() {
           </ul>
         </div>
         <hr className="my-7 border-gray-200 transition-colors duration-300 dark:border-gray-700" />
-        <div className="flex flex-col gap-2 text-sm text-[var(--foreground)]/80 sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
-          </span>
-          <span>kontakt@dlabliskich.pl</span>
+      </div>
+      <div className="border-t border-[#1b2940] bg-[#0b1426]">
+        <div className="mx-auto w-full max-w-7xl px-4 py-4 text-center text-sm text-white/85 sm:px-6 lg:px-8">
+          © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
         </div>
       </div>
     </footer>
