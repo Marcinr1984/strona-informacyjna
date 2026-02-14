@@ -41,21 +41,18 @@ const sections = [
 
 function SectionIcon({ type }: { type: string }) {
   if (type === "heart") {
-    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M12 21s-6.7-4.35-9.33-8.23C.65 9.8 2.04 5.5 6 5.5c2.07 0 3.24 1.18 4 2.2.76-1.02 1.93-2.2 4-2.2 3.96 0 5.35 4.3 3.33 7.27C18.7 16.65 12 21 12 21Z"/></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.175 2.25 8.25 2.25 5.322 4.522 3 7.41 3c1.962 0 3.64 1.106 4.59 2.726C12.95 4.106 14.627 3 16.59 3 19.478 3 21.75 5.322 21.75 8.25c0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.155 15.155 0 0 1-.383.219l-.022.012-.007.003a.75.75 0 0 1-.71 0Z"/></svg>;
   }
   if (type === "compass") {
-    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="8"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2Z"/></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M11.54 22.351a.75.75 0 0 0 .92 0l2.9-2.173A.75.75 0 0 0 15.75 19.6V15a.75.75 0 0 1 .75-.75h4.6a.75.75 0 0 0 .58-1.39l-2.172-2.9a.75.75 0 0 0-1.152 0L15 13.5a.75.75 0 0 1-.53.22H9.53a.75.75 0 0 1-.53-.22L5.46 9.96a.75.75 0 0 0-1.152 0L2.136 12.86a.75.75 0 0 0 .58 1.39h4.6A.75.75 0 0 1 8.066 15v4.6a.75.75 0 0 0 .39.578l2.9 2.173Z" clipRule="evenodd"/></svg>;
   }
   if (type === "layers") {
-    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M11.644 1.952a.75.75 0 0 1 .712 0l9.75 5.25a.75.75 0 0 1 0 1.296l-9.75 5.25a.75.75 0 0 1-.712 0l-9.75-5.25a.75.75 0 0 1 0-1.296l9.75-5.25Z"/><path d="m3.37 11.72 8.274 4.455a.75.75 0 0 0 .712 0l8.274-4.455a.75.75 0 0 1 .71 1.322l-8.63 4.647a.75.75 0 0 1-.71 0l-8.63-4.647a.75.75 0 1 1 .71-1.322Z"/><path d="m3.37 15.97 8.274 4.455a.75.75 0 0 0 .712 0l8.274-4.455a.75.75 0 1 1 .71 1.322l-8.63 4.647a.75.75 0 0 1-.71 0l-8.63-4.647a.75.75 0 1 1 .71-1.322Z"/></svg>;
   }
   if (type === "users") {
-    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a3 3 0 0 1 0 5.74"/></svg>;
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M8.25 6a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM2.25 20.105a7.5 7.5 0 0 1 15 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 9.75 22.5 18.683 18.683 0 0 1 2.687 20.8a.75.75 0 0 1-.437-.695ZM16.5 8.25a.75.75 0 0 1 .75-.75h1.5V6a.75.75 0 0 1 1.5 0v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0V9h-1.5a.75.75 0 0 1-.75-.75Z" clipRule="evenodd"/></svg>;
   }
-  if (type === "clock") {
-    return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>;
-  }
-  return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M9 12h6"/><path d="M12 3v9"/></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M6.429 2.25A2.25 2.25 0 0 0 4.18 4.5v15A2.25 2.25 0 0 0 6.43 21.75h11.142a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.43ZM12 6a.75.75 0 0 1 .75.75v2.5h2.5a.75.75 0 0 1 0 1.5h-2.5v2.5a.75.75 0 0 1-1.5 0v-2.5h-2.5a.75.75 0 0 1 0-1.5h2.5v-2.5A.75.75 0 0 1 12 6Z" clipRule="evenodd"/></svg>;
 }
 
 function StepIllustrationIcon({ step }: { step: 1 | 2 | 3 }) {

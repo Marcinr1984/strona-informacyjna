@@ -27,10 +27,8 @@ export default function FAQPage() {
       <section className="panel p-8">
         <div className="flex items-center gap-3">
           <div className="icon-chip">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-.8.7-1.7 1.2-1.7 2.7" />
-              <circle cx="12" cy="17" r="1" fill="currentColor" stroke="none" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.25-3a1.5 1.5 0 1 1 2.37 1.213c-.611.458-1.12 1.103-1.12 2.037a.75.75 0 0 1-1.5 0c0-1.468.805-2.519 1.72-3.204a.002.002 0 0 0 .001-.001A1.5 1.5 0 0 1 10.5 9Zm1.5 7.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z" clipRule="evenodd"/>
             </svg>
           </div>
           <h1 className="section-title text-4xl">Najczęściej zadawane pytania</h1>

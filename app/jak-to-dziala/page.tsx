@@ -29,7 +29,7 @@ const extras = [
 
 const materials = [
   {
-    icon: "⬛",
+    icon: "square",
     title: "Kamień naturalny (granit, marmur)",
     subtitle: "Klasyka i elegancja",
     description:
@@ -38,7 +38,7 @@ const materials = [
       "Polecany dla osób ceniących tradycję, prostotę i minimalizm. Pomagamy znaleźć sprawdzony zakład kamieniarski.",
   },
   {
-    icon: "⚙",
+    icon: "gear",
     title: "Stal nierdzewna / stal szlachetna",
     subtitle: "Nowoczesna elegancja i wyjątkowa trwałość",
     description:
@@ -47,7 +47,7 @@ const materials = [
       "Możliwe są także indywidualne formy, np. podobizna osoby zmarłej wykonana na podstawie fotografii.",
   },
   {
-    icon: "❤",
+    icon: "heart",
     title: "Ceramika / porcelana",
     subtitle: "Delikatność i subtelność",
     description:
@@ -56,7 +56,7 @@ const materials = [
       "Usługę realizujemy w ramach naszej oferty lub we własnym zakresie po stronie klienta.",
   },
   {
-    icon: "●",
+    icon: "dot",
     title: "Aluminium anodowane",
     subtitle: "Lekkość i subtelna nowoczesność",
     description:
@@ -65,7 +65,7 @@ const materials = [
       "Rozwiązanie szczególnie polecane do minimalistycznych i współczesnych projektów.",
   },
   {
-    icon: "▱",
+    icon: "glass",
     title: "Szkło dymione lub przezroczyste",
     subtitle: "Subtelność i nowoczesna elegancja",
     description:
@@ -122,15 +122,30 @@ function StepIllustrationIcon({ step }: { step: number }) {
   );
 }
 
+function MaterialIcon({ type }: { type: string }) {
+  if (type === "square") {
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="M3 3h18v18H3V3Z" /></svg>;
+  }
+  if (type === "gear") {
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M11.983 1.25c.473 0 .91.297 1.066.753l.443 1.297a1.25 1.25 0 0 0 1.646.749l1.261-.517a1.125 1.125 0 0 1 1.411.481l1.28 2.217c.236.41.173.926-.158 1.27l-.96 1a1.25 1.25 0 0 0 0 1.732l.96 1c.331.344.394.86.158 1.27l-1.28 2.217a1.125 1.125 0 0 1-1.41.48l-1.262-.516a1.25 1.25 0 0 0-1.646.75l-.443 1.296a1.125 1.125 0 0 1-1.066.753h-2.56a1.125 1.125 0 0 1-1.066-.753l-.443-1.297a1.25 1.25 0 0 0-1.646-.749l-1.261.517a1.125 1.125 0 0 1-1.411-.48L1.94 14.77a1.125 1.125 0 0 1 .158-1.27l.96-1a1.25 1.25 0 0 0 0-1.732l-.96-1a1.125 1.125 0 0 1-.158-1.27l1.28-2.217a1.125 1.125 0 0 1 1.41-.48l1.262.516a1.25 1.25 0 0 0 1.646-.75l.443-1.296a1.125 1.125 0 0 1 1.066-.753h2.56Zm.017 7a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z" clipRule="evenodd"/></svg>;
+  }
+  if (type === "heart") {
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.175 2.25 8.25 2.25 5.322 4.522 3 7.41 3c1.962 0 3.64 1.106 4.59 2.726C12.95 4.106 14.627 3 16.59 3 19.478 3 21.75 5.322 21.75 8.25c0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.155 15.155 0 0 1-.383.219l-.022.012-.007.003a.75.75 0 0 1-.71 0Z"/></svg>;
+  }
+  if (type === "dot") {
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><circle cx="12" cy="12" r="9"/></svg>;
+  }
+  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M5.25 2.25A3 3 0 0 0 2.25 5.25v13.5a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V5.25a3 3 0 0 0-3-3H5.25Zm2.56 4.03a.75.75 0 0 1 .9-.55l7.5 1.5a.75.75 0 0 1 .6.73v8.08a2.66 2.66 0 1 1-1.5-2.4V10.1l-6-1.2v7.14a2.66 2.66 0 1 1-1.5-2.4V7.18a.75.75 0 0 1 .55-.9Z" clipRule="evenodd"/></svg>;
+}
+
 export default function JakToDzialaPage() {
   return (
     <main className="page-shell">
       <section className="panel p-8">
         <div className="flex items-center gap-3">
           <div className="icon-chip">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="8" />
-              <path d="m14.5 9.5-2 5-5 2 2-5 5-2Z" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+              <path fillRule="evenodd" d="M11.54 22.351a.75.75 0 0 0 .92 0l2.9-2.173A.75.75 0 0 0 15.75 19.6V15a.75.75 0 0 1 .75-.75h4.6a.75.75 0 0 0 .58-1.39l-2.172-2.9a.75.75 0 0 0-1.152 0L15 13.5a.75.75 0 0 1-.53.22H9.53a.75.75 0 0 1-.53-.22L5.46 9.96a.75.75 0 0 0-1.152 0L2.136 12.86a.75.75 0 0 0 .58 1.39h4.6A.75.75 0 0 1 8.066 15v4.6a.75.75 0 0 0 .39.578l2.9 2.173Z" clipRule="evenodd"/>
             </svg>
           </div>
           <h1 className="section-title text-4xl">Jak to działa</h1>
@@ -203,7 +218,7 @@ export default function JakToDzialaPage() {
         {materials.map((material) => (
           <article key={material.title} className="panel p-6">
             <h4 className="section-title text-xl">
-              <span className="mr-2">{material.icon}</span>
+              <span className="mr-2 inline-flex text-cyan-600"><MaterialIcon type={material.icon} /></span>
               {material.title}
             </h4>
             <p className="mt-1 text-sm font-medium text-sky-600">{material.subtitle}</p>
