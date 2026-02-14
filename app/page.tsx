@@ -158,7 +158,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="space-y-5">
-                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tablice kodów QR Memorial</h2>
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tablice kodów QR DlaBliskich</h2>
                   <p className="max-w-2xl text-lg leading-relaxed text-cyan-50/95">
                     Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
                     z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
