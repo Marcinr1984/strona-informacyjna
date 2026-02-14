@@ -68,32 +68,34 @@ function CennikHeroIllustration() {
 export default function CennikPage() {
   return (
     <main className="page-shell">
-      <section className="panel overflow-hidden bg-[#f3f5f7] p-8 sm:p-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <h1 className="section-title text-4xl leading-tight sm:text-5xl">
-              Stwórz darmowe konto i zacznij od razu
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg text-gray-700">
-              Rozpocznij tworzenie strony pamięci bez kosztów na start. Dodawaj wspomnienia,
-              zdjęcia i historie życia, a w dowolnym momencie rozszerz konto o dodatkowe funkcje.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://qr.dlabliskich.pl/auth/register"
-                className="btn-primary px-7 py-3 text-sm"
-              >
-                Stwórz swoje darmowe konto
-              </a>
-              <a
-                href="https://qr.dlabliskich.pl/auth/login"
-                className="inline-flex rounded-lg border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50"
-              >
-                Mam już konto
-              </a>
+      <section className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-white py-12 shadow-[0_14px_35px_-26px_rgba(15,23,42,0.45)] sm:py-14">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h1 className="section-title text-4xl leading-tight sm:text-5xl">
+                Stwórz darmowe konto i zacznij od razu
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg text-gray-700">
+                Rozpocznij tworzenie strony pamięci bez kosztów na start. Dodawaj wspomnienia,
+                zdjęcia i historie życia, a w dowolnym momencie rozszerz konto o dodatkowe funkcje.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="https://qr.dlabliskich.pl/auth/register"
+                  className="btn-primary px-7 py-3 text-sm"
+                >
+                  Stwórz swoje darmowe konto
+                </a>
+                <a
+                  href="https://qr.dlabliskich.pl/auth/login"
+                  className="inline-flex rounded-lg border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50"
+                >
+                  Mam już konto
+                </a>
+              </div>
             </div>
+            <CennikHeroIllustration />
           </div>
-          <CennikHeroIllustration />
         </div>
       </section>
 
