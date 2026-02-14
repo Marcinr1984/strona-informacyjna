@@ -35,6 +35,7 @@ export default function SubpagePromo() {
   }
   const isKontakt = pathname === '/kontakt'
   const isWspolpraca = pathname === '/wspolpraca'
+  const isONas = pathname === '/o-nas'
 
   return (
     <section className="relative left-1/2 right-1/2 mb-10 w-screen -translate-x-1/2 bg-white py-12 shadow-[0_14px_35px_-26px_rgba(15,23,42,0.45)] sm:mb-12 sm:py-14">
@@ -47,6 +48,15 @@ export default function SubpagePromo() {
                 <p className="mt-5 max-w-2xl text-lg text-gray-700">
                   Napisz do nas, jeśli chcesz uruchomić stronę pamięci, zapytać o materiały
                   graweru albo współpracę. Odpowiadamy możliwie szybko.
+                </p>
+              </>
+            ) : isONas ? (
+              <>
+                <h1 className="section-title text-4xl leading-tight sm:text-5xl">Kim jesteśmy</h1>
+                <p className="mt-5 max-w-2xl text-lg text-gray-700">
+                  Pamięć o bliskich to coś więcej niż imię wyryte w kamieniu. To historie, uśmiechy,
+                  głosy i chwile, które chcemy zachować na zawsze. Właśnie z tej potrzeby powstała
+                  nasza firma.
                 </p>
               </>
             ) : isWspolpraca ? (
