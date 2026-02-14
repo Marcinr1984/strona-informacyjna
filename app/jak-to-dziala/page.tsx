@@ -78,46 +78,31 @@ const materials = [
 function StepIllustrationIcon({ step }: { step: number }) {
   if (step === 1) {
     return (
-      <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="9" y="42" width="46" height="5" rx="2.5" />
-        <path d="M16 42V23a3 3 0 0 1 3-3h20" />
-        <path d="M42 16h6v6" />
-        <path d="m28 34 20-18" />
-        <path d="M23 27h10M23 32h6" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <path fillRule="evenodd" d="M3.75 3a.75.75 0 0 0-.75.75v14.5a2.75 2.75 0 0 0 2.75 2.75h12.5A2.75 2.75 0 0 0 21 18.25V8.56a2.75 2.75 0 0 0-.805-1.945l-2.81-2.81A2.75 2.75 0 0 0 15.44 3H3.75Zm11.5 2.44V7.5a.75.75 0 0 0 .75.75h2.06l-2.81-2.81ZM7.5 11.25a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1-.75-.75Zm0 3.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 7.5 15Z" clipRule="evenodd" />
       </svg>
     );
   }
   if (step === 2) {
     return (
-      <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="8" y="12" width="20" height="16" rx="2" />
-        <rect x="36" y="12" width="20" height="16" rx="2" />
-        <rect x="8" y="36" width="20" height="16" rx="2" />
-        <rect x="36" y="36" width="20" height="16" rx="2" />
-        <path d="m8 46 7-6 5 4 8-8" />
-        <circle cx="46" cy="22" r="3" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <path fillRule="evenodd" d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6Zm3.86.75a.75.75 0 0 0-.53 1.28l4.5 4.5a.75.75 0 0 0 1.06 0l1.72-1.72 3.22 3.22a.75.75 0 0 0 1.06 0l3-3a.75.75 0 0 0-1.06-1.06l-2.47 2.47-3.22-3.22a.75.75 0 0 0-1.06 0l-1.72 1.72-3.97-3.97a.747.747 0 0 0-.53-.22Z" clipRule="evenodd" />
       </svg>
     );
   }
   if (step === 3) {
     return (
-      <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="20" y="8" width="24" height="48" rx="6" />
-        <circle cx="32" cy="49" r="1.8" fill="currentColor" />
-        <path d="M26 16h12M26 24h10M26 32h12" />
-        <path d="M50 22h6a4 4 0 0 1 0 8h-6" />
-        <path d="m53 20 3 2-3 2" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+        <path fillRule="evenodd" d="M7.5 2.25A2.25 2.25 0 0 0 5.25 4.5v15A2.25 2.25 0 0 0 7.5 21.75h9A2.25 2.25 0 0 0 18.75 19.5v-15A2.25 2.25 0 0 0 16.5 2.25h-9Zm4.5 16.5a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Zm-2.25-12a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
+        <path d="M20.25 7.5a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5H21v1.5a.75.75 0 0 1-1.5 0v-1.5H18a.75.75 0 0 1 0-1.5h1.5v-1.5a.75.75 0 0 1 .75-.75Z" />
       </svg>
     );
   }
 
   return (
-    <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M14 50h36" />
-      <path d="M20 50V18h24v32" />
-      <path d="M26 24h12M26 30h12M26 36h8" />
-      <path d="M48 20h8v8" />
-      <path d="m46 30 10-10" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+      <path fillRule="evenodd" d="M4.5 3.75A2.25 2.25 0 0 0 2.25 6v12A2.25 2.25 0 0 0 4.5 20.25h15A2.25 2.25 0 0 0 21.75 18V6A2.25 2.25 0 0 0 19.5 3.75h-15Zm2.25 4.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm0 3.75a.75.75 0 0 1 .75-.75h3.75a.75.75 0 0 1 0 1.5H7.5a.75.75 0 0 1-.75-.75Z" clipRule="evenodd" />
+      <path d="M18 10.5a.75.75 0 0 1 .75.75v1.5h1.5a.75.75 0 0 1 0 1.5h-1.5v1.5a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5A.75.75 0 0 1 18 10.5Z" />
     </svg>
   );
 }
@@ -141,21 +126,7 @@ function MaterialIcon({ type }: { type: string }) {
 export default function JakToDzialaPage() {
   return (
     <main className="page-shell">
-      <section className="panel p-8">
-        <div className="flex items-center gap-3">
-          <div className="icon-chip">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-              <path fillRule="evenodd" d="M11.54 22.351a.75.75 0 0 0 .92 0l2.9-2.173A.75.75 0 0 0 15.75 19.6V15a.75.75 0 0 1 .75-.75h4.6a.75.75 0 0 0 .58-1.39l-2.172-2.9a.75.75 0 0 0-1.152 0L15 13.5a.75.75 0 0 1-.53.22H9.53a.75.75 0 0 1-.53-.22L5.46 9.96a.75.75 0 0 0-1.152 0L2.136 12.86a.75.75 0 0 0 .58 1.39h4.6A.75.75 0 0 1 8.066 15v4.6a.75.75 0 0 0 .39.578l2.9 2.173Z" clipRule="evenodd"/>
-            </svg>
-          </div>
-          <h1 className="section-title text-4xl">Jak to działa</h1>
-        </div>
-        <p className="mt-4 text-gray-700">
-          Cały proces zaprojektowaliśmy tak, aby był prosty, bezpieczny i wygodny dla rodzin.
-        </p>
-      </section>
-
-      <section className="panel mt-8 p-8 sm:p-10">
+      <section className="panel p-8 sm:p-10">
         <h2 className="section-title text-3xl sm:text-4xl">Proces krok po kroku</h2>
         <p className="mt-3 max-w-3xl text-gray-700">
           To rozwinięcie sekcji ze strony głównej: każdy etap jest opisany dokładniej, aby łatwo
