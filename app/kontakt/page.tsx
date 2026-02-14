@@ -2,13 +2,7 @@ export default function KontaktPage() {
   return (
     <main className="page-shell max-w-6xl">
       <section className="panel bg-[#f4f6f9] p-6 sm:p-8 lg:p-10">
-        <h1 className="section-title text-4xl">Kontakt</h1>
-        <p className="mt-3 max-w-3xl text-gray-700">
-          Napisz do nas, jeśli chcesz uruchomić stronę pamięci, zapytać o materiały graweru albo współpracę.
-          Odpowiadamy możliwie szybko.
-        </p>
-
-        <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.25fr]">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.25fr]">
           <aside className="space-y-4">
             <article className="rounded-2xl border border-[#d9e0ea] bg-white p-5">
               <h2 className="section-title text-xl">Dane kontaktowe</h2>
