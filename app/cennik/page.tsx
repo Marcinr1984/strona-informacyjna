@@ -68,7 +68,7 @@ export default function CennikPage() {
           >
             {plan.highlighted && (
               <p className="absolute -top-4 left-1/2 inline-flex -translate-x-1/2 whitespace-nowrap rounded-full bg-cyan-500 px-5 py-1.5 text-sm font-semibold text-white shadow-sm">
-                Nasz najpopularniejszy plan
+                Najczęściej wybierany
               </p>
             )}
 
