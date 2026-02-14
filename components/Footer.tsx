@@ -38,7 +38,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bg-[radial-gradient(circle_at_22%_18%,#184c74_0%,#0e2f4e_38%,#0a223a_70%,#081b2f_100%)]">
+      <div className="bg-[#0b1426]">
         <div className="mx-auto w-full max-w-7xl px-4 py-4 text-center text-sm text-white/85 sm:px-6 lg:px-8">
           Copyright © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
         </div>
