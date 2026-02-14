@@ -105,7 +105,7 @@ export default function Home() {
     <>
       <SliderSection />
       <main className="page-shell">
-        <section className="panel p-8 text-center sm:p-10">
+        <section className="panel mt-8 p-8 text-center sm:mt-10 sm:p-10">
           <h1 className="section-title text-3xl sm:text-4xl">
             Stwórz stronę pamięci w kilku prostych krokach
           </h1>
@@ -161,10 +161,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative left-1/2 right-1/2 mt-10 w-screen -translate-x-1/2 overflow-hidden border-y border-[#153a59] bg-[radial-gradient(circle_at_20%_20%,#133f63_0%,#0b2238_45%,#07192c_100%)] py-12 text-white sm:py-14">
+        <section className="relative left-1/2 right-1/2 mt-14 w-screen -translate-x-1/2 overflow-hidden border-y border-[#153a59] bg-[radial-gradient(circle_at_20%_20%,#133f63_0%,#0b2238_45%,#07192c_100%)] py-12 text-white sm:mt-16 sm:py-14">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 md:grid-cols-[280px_1fr] md:items-center">
-            <div className="relative mx-auto h-[230px] w-[200px] overflow-hidden rounded-2xl bg-white/10">
+            <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl bg-white/10">
               <Image
                 src="/slider-bg.png"
                 alt="Kod QR memorial"
@@ -184,7 +184,7 @@ export default function Home() {
                 Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
                 z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
               </p>
-              <Link href="/materialy" className="mt-6 inline-flex rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-cyan-400">
+              <Link href="/materialy" className="btn-primary mt-6 px-6 py-3 text-sm">
                 Dowiedz się więcej
               </Link>
             </div>
@@ -199,7 +199,7 @@ export default function Home() {
                 Oferujemy wskazówki ekspertów i spersonalizowane wsparcie, które pomaga stworzyć trwałe
                 dziedzictwo cyfrowe dla kolejnych pokoleń.
                 </p>
-                <Link href="/wspolpraca" className="mt-6 inline-flex rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-cyan-400">
+                <Link href="/wspolpraca" className="btn-primary mt-6 px-6 py-3 text-sm">
                   Dowiedz się więcej
                 </Link>
               </div>
@@ -216,7 +216,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {sections.map((section) => (
             <article
               key={section.href}
