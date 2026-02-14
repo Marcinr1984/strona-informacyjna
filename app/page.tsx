@@ -64,6 +64,41 @@ function SectionIcon({ type }: { type: string }) {
   return <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7"/><path d="M9 12h6"/><path d="M12 3v9"/></svg>;
 }
 
+function StepIllustrationIcon({ step }: { step: 1 | 2 | 3 }) {
+  if (step === 1) {
+    return (
+      <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="9" y="42" width="46" height="5" rx="2.5" />
+        <path d="M16 42V23a3 3 0 0 1 3-3h20" />
+        <path d="M42 16h6v6" />
+        <path d="m28 34 20-18" />
+        <path d="M23 27h10M23 32h6" />
+      </svg>
+    )
+  }
+  if (step === 2) {
+    return (
+      <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="8" y="12" width="20" height="16" rx="2" />
+        <rect x="36" y="12" width="20" height="16" rx="2" />
+        <rect x="8" y="36" width="20" height="16" rx="2" />
+        <rect x="36" y="36" width="20" height="16" rx="2" />
+        <path d="m8 46 7-6 5 4 8-8" />
+        <circle cx="46" cy="22" r="3" />
+      </svg>
+    )
+  }
+  return (
+    <svg viewBox="0 0 64 64" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="20" y="8" width="24" height="48" rx="6" />
+      <circle cx="32" cy="49" r="1.8" fill="currentColor" />
+      <path d="M26 16h12M26 24h10M26 32h12" />
+      <path d="M50 22h6a4 4 0 0 1 0 8h-6" />
+      <path d="m53 20 3 2-3 2" />
+    </svg>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -79,17 +114,23 @@ export default function Home() {
 
           <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
             <article className="rounded-2xl border border-slate-200 bg-white p-6">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">1</div>
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
+                <StepIllustrationIcon step={1} />
+              </div>
               <h2 className="section-title mt-4 text-2xl text-cyan-600">Utwórz stronę</h2>
               <p className="mt-2 text-base text-gray-700">Dodaj podstawowe informacje i rozpocznij tworzenie historii.</p>
             </article>
             <article className="rounded-2xl border border-slate-200 bg-white p-6">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">2</div>
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
+                <StepIllustrationIcon step={2} />
+              </div>
               <h2 className="section-title mt-4 text-2xl text-cyan-600">Dodaj wspomnienia</h2>
               <p className="mt-2 text-base text-gray-700">Wstaw zdjęcia, filmy i opisy ważnych momentów z życia.</p>
             </article>
             <article className="rounded-2xl border border-slate-200 bg-white p-6">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-2xl">3</div>
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
+                <StepIllustrationIcon step={3} />
+              </div>
               <h2 className="section-title mt-4 text-2xl text-cyan-600">Udostępnij bliskim</h2>
               <p className="mt-2 text-base text-gray-700">Połącz stronę z kodem QR i umożliw odwiedziny każdemu.</p>
             </article>
