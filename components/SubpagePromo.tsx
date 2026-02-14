@@ -10,13 +10,14 @@ function PromoIllustration({ isKontakt }: { isKontakt: boolean }) {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="rounded-2xl border border-cyan-200 bg-white/80 p-6 shadow-lg backdrop-blur">
           {isKontakt ? (
-            <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="10" y="16" width="44" height="24" rx="4" />
-              <path d="m12 18 20 14 20-14" />
-              <path d="M23 45c3 5 7 8 11 8s8-3 11-8" />
-              <path d="M19 48c2 3 5 5 7 6" />
-              <path d="M45 48c-2 3-5 5-7 6" />
-            </svg>
+            <div className="flex items-center gap-2 text-cyan-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-16 w-16">
+                <path d="M1.5 8.67v6.58c0 1.56 1.27 2.83 2.83 2.83h15.34c1.56 0 2.83-1.27 2.83-2.83V8.67a2.83 2.83 0 0 0-1.24-2.35l-7.67-5.11a2.83 2.83 0 0 0-3.14 0L2.74 6.32A2.83 2.83 0 0 0 1.5 8.67Zm2.58-.56 7.92 5.28 7.92-5.28a.75.75 0 1 1 .83 1.25l-8.33 5.55a.75.75 0 0 1-.84 0L3.25 9.36a.75.75 0 1 1 .83-1.25Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-8 w-8 -translate-y-5 rounded-full bg-white p-1.5 shadow">
+                <path fillRule="evenodd" d="M19.5 8.25V6A2.25 2.25 0 0 0 17.25 3.75h-10.5A2.25 2.25 0 0 0 4.5 6v12a2.25 2.25 0 0 0 2.25 2.25h5.35a.75.75 0 0 0 0-1.5H6.75A.75.75 0 0 1 6 18V6a.75.75 0 0 1 .75-.75h10.5A.75.75 0 0 1 18 6v2.25a.75.75 0 0 0 1.5 0ZM18 12a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0-1.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" clipRule="evenodd" />
+              </svg>
+            </div>
           ) : (
             <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="22" cy="18" r="7" />
