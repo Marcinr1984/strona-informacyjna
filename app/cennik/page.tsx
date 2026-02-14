@@ -43,25 +43,67 @@ const plans = [
   },
 ];
 
+function CennikHeroIllustration() {
+  return (
+    <div className="relative mx-auto h-64 w-full max-w-[320px] overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-100 via-sky-50 to-violet-100">
+      <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-cyan-300/60 blur-xl" />
+      <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-violet-300/50 blur-xl" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="rounded-2xl border border-cyan-200 bg-white/80 p-6 shadow-lg backdrop-blur">
+          <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="22" cy="18" r="7" />
+            <path d="M10 42c1-8 6-13 12-13s11 5 12 13" />
+            <rect x="35" y="14" width="20" height="14" rx="3" />
+            <path d="M45 18v6M42 21h6" />
+            <path d="M37 40h18" />
+            <path d="M40 46h12" />
+            <path d="M44 34v16" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function CennikPage() {
   return (
     <main className="page-shell">
-      <section className="panel mx-auto max-w-3xl p-8 text-center">
-        <div className="flex items-center justify-center gap-3">
-          <div className="icon-chip">
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7" />
-              <path d="M9 12h6" />
-              <path d="M12 3v9" />
-            </svg>
+      <section className="panel overflow-hidden bg-[#f3f5f7] p-8 sm:p-10">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <h1 className="section-title text-4xl leading-tight sm:text-5xl">
+              Stwórz darmowe konto i zacznij od razu
+            </h1>
+            <p className="mt-5 max-w-2xl text-lg text-gray-700">
+              Rozpocznij tworzenie strony pamięci bez kosztów na start. Dodawaj wspomnienia,
+              zdjęcia i historie życia, a w dowolnym momencie rozszerz konto o dodatkowe funkcje.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://qr.dlabliskich.pl/auth/register"
+                className="btn-primary px-7 py-3 text-sm"
+              >
+                Stwórz swoje darmowe konto
+              </a>
+              <a
+                href="https://qr.dlabliskich.pl/auth/login"
+                className="inline-flex rounded-lg border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50"
+              >
+                Mam już konto
+              </a>
+            </div>
           </div>
-          <h1 className="section-title text-4xl transition-colors duration-300 sm:text-5xl">
-            Cennik
-          </h1>
+          <CennikHeroIllustration />
         </div>
+      </section>
+
+      <section className="panel mx-auto mt-10 max-w-3xl p-8 text-center">
+        <h2 className="section-title text-4xl transition-colors duration-300 sm:text-5xl">
+          Cennik
+        </h2>
         <p className="mt-4 text-base text-gray-700 transition-colors duration-300 sm:text-lg">
-          Wybierz plan dopasowany do liczby stron i zakresu wspomnień, które chcesz
-          zachować dla bliskich.
+          Dowiedz się o naszych planach i wybierz pakiet dopasowany do liczby stron oraz
+          zakresu wspomnień, które chcesz zachować dla bliskich.
         </p>
       </section>
 
