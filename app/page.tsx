@@ -184,7 +184,7 @@ export default function Home() {
                 </div>
                 <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl">
                   <Image
-                    src="/slider-bggg.png"
+                    src="/laptop.png"
                     alt="Tworzenie strony pamięci online"
                     fill
                     className="object-cover"
