@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 
-function PromoIllustration({ isKontakt }: { isKontakt: boolean }) {
+function PromoIllustration({ isKontakt, isWspolpraca }: { isKontakt: boolean; isWspolpraca: boolean }) {
   return (
     <div className="relative mx-auto h-64 w-full max-w-[320px] overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-100 via-sky-50 to-violet-100">
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-cyan-300/60 blur-xl" />
@@ -12,6 +12,10 @@ function PromoIllustration({ isKontakt }: { isKontakt: boolean }) {
           {isKontakt ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-16 w-16 text-cyan-600">
               <path d="M1.5 8.67v6.58c0 1.56 1.27 2.83 2.83 2.83h15.34c1.56 0 2.83-1.27 2.83-2.83V8.67a2.83 2.83 0 0 0-1.24-2.35l-7.67-5.11a2.83 2.83 0 0 0-3.14 0L2.74 6.32A2.83 2.83 0 0 0 1.5 8.67Zm2.58-.56 7.92 5.28 7.92-5.28a.75.75 0 1 1 .83 1.25l-8.33 5.55a.75.75 0 0 1-.84 0L3.25 9.36a.75.75 0 1 1 .83-1.25Z" />
+            </svg>
+          ) : isWspolpraca ? (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-16 w-16 text-cyan-600">
+              <path fillRule="evenodd" d="M5.25 4.5A2.25 2.25 0 0 1 7.5 2.25h9A2.25 2.25 0 0 1 18.75 4.5v1.758a3.75 3.75 0 0 1 1.5 2.992v6a3.75 3.75 0 0 1-3.75 3.75h-.005c-.37.88-1.108 1.5-1.995 1.5h-5a2.25 2.25 0 0 1-2.245-2.09 3.75 3.75 0 0 1-3.51-3.73v-6A3.75 3.75 0 0 1 5.25 6.258V4.5Zm2.25-.75a.75.75 0 0 0-.75.75v1.5h10.5V4.5a.75.75 0 0 0-.75-.75h-9Zm4.5 6a.75.75 0 0 1 .75.75V12h1.5a.75.75 0 0 1 0 1.5h-1.5V15a.75.75 0 0 1-1.5 0v-1.5h-1.5a.75.75 0 0 1 0-1.5h1.5v-1.5a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
             </svg>
           ) : (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-16 w-16 text-cyan-600">
@@ -86,7 +90,7 @@ export default function SubpagePromo() {
               </>
             )}
           </div>
-          <PromoIllustration isKontakt={isKontakt} />
+          <PromoIllustration isKontakt={isKontakt} isWspolpraca={isWspolpraca} />
         </div>
       </div>
     </section>
