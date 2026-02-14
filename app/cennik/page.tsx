@@ -60,15 +60,15 @@ export default function CennikPage() {
         {plans.map((plan) => (
           <article
             key={plan.name}
-              className={`panel p-6 transition-colors duration-300 ${
+              className={`panel relative overflow-visible p-6 transition-colors duration-300 ${
               plan.highlighted
-                ? "border-sky-500 bg-sky-50/65"
+                ? "border-sky-500 bg-sky-50/65 pt-10"
                 : ""
             }`}
           >
             {plan.highlighted && (
-              <p className="mb-4 inline-flex rounded-full bg-sky-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-                Najczęściej wybierany
+              <p className="absolute -top-4 left-1/2 inline-flex -translate-x-1/2 whitespace-nowrap rounded-full bg-cyan-500 px-5 py-1.5 text-sm font-semibold text-white shadow-sm">
+                Nasz najpopularniejszy plan
               </p>
             )}
 
