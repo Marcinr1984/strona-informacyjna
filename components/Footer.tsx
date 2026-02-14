@@ -7,7 +7,13 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src="/logo-dlabliskich.svg" className="h-8 w-auto" alt="Logo Dla Bliskich" width={140} height={32} />
+            <Image
+              src="/logo-dlabliskich.svg"
+              className="h-8 w-auto grayscale brightness-0 opacity-90"
+              alt="Logo Dla Bliskich"
+              width={140}
+              height={32}
+            />
             <span className="self-center whitespace-nowrap text-2xl font-semibold text-[var(--foreground)] transition-colors duration-300">DlaBliskich</span>
           </Link>
           <ul className="flex flex-nowrap items-center gap-7 overflow-x-auto whitespace-nowrap text-sm font-medium text-[var(--foreground)] transition-colors duration-300">
