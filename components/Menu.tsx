@@ -11,7 +11,6 @@ const NAV_LINKS = [
   { href: '/jak-to-dziala', label: 'Jak to działa' },
   { href: '/cennik', label: 'Cennik' },
   { href: '/wspolpraca', label: 'Współpraca' },
-  { href: '/kapsula-czasu', label: 'Kapsuła czasu' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
 

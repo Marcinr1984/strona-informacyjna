@@ -9,7 +9,6 @@ const LABELS: Record<string, string> = {
   materialy: 'Materiały',
   cennik: 'Cennik',
   wspolpraca: 'Współpraca',
-  'kapsula-czasu': 'Kapsuła czasu',
   kontakt: 'Kontakt',
   faq: 'FAQ',
 }

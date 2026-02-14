@@ -33,9 +33,6 @@ export default function Footer() {
               <Link href="/wspolpraca" className="hover:underline">Współpraca</Link>
             </li>
             <li>
-              <Link href="/kapsula-czasu" className="hover:underline">Kapsuła czasu</Link>
-            </li>
-            <li>
               <Link href="/kontakt" className="hover:underline">Kontakt</Link>
             </li>
           </ul>

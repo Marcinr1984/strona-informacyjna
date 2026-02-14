@@ -32,13 +32,6 @@ const sections = [
     href: "/wspolpraca",
   },
   {
-    icon: "clock",
-    title: "Kapsuła czasu",
-    description:
-      "Nowoczesny sposób zabezpieczenia historii życia i przekazania ich kolejnym pokoleniom.",
-    href: "/kapsula-czasu",
-  },
-  {
     icon: "tag",
     title: "Cennik",
     description: "Przejrzyste pakiety i zakresy usług dla klientów indywidualnych i rodzin.",
