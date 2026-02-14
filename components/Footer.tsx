@@ -3,20 +3,20 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-[var(--surface-border)] bg-[var(--footer-background)] text-[var(--foreground)] transition-colors duration-300">
+    <footer className="mt-16 border-t border-[#1b2940] bg-[#0b1426] text-white transition-colors duration-300">
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <Image
               src="/logo-dlabliskich.svg"
-              className="h-8 w-auto grayscale brightness-0 opacity-90"
+              className="h-8 w-auto"
               alt="Logo Dla Bliskich"
               width={140}
               height={32}
             />
-            <span className="self-center whitespace-nowrap text-2xl font-semibold text-[var(--foreground)] transition-colors duration-300">DlaBliskich</span>
+            <span className="self-center whitespace-nowrap text-2xl font-semibold text-white transition-colors duration-300">DlaBliskich</span>
           </Link>
-          <ul className="flex flex-nowrap items-center gap-7 overflow-x-auto whitespace-nowrap text-sm font-medium text-[var(--foreground)] transition-colors duration-300">
+          <ul className="flex flex-nowrap items-center gap-7 overflow-x-auto whitespace-nowrap text-sm font-medium text-white/90 transition-colors duration-300">
             <li>
               <Link href="/" className="hover:underline">Start</Link>
             </li>
@@ -37,11 +37,11 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <hr className="my-7 border-gray-200 transition-colors duration-300 dark:border-gray-700" />
+        <hr className="my-7 border-[#1b2940] transition-colors duration-300" />
       </div>
       <div className="border-t border-[#1b2940] bg-[#0b1426]">
         <div className="mx-auto w-full max-w-7xl px-4 py-4 text-center text-sm text-white/85 sm:px-6 lg:px-8">
-          © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
+          Copyright © 2026 <Link href="/" className="hover:underline">DlaBliskich</Link>. Wszelkie prawa zastrzeżone.
         </div>
       </div>
     </footer>
