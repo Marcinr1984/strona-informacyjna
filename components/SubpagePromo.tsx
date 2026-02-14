@@ -30,6 +30,7 @@ export default function SubpagePromo() {
     return null
   }
   const isKontakt = pathname === '/kontakt'
+  const isWspolpraca = pathname === '/wspolpraca'
 
   return (
     <section className="relative left-1/2 right-1/2 mb-10 w-screen -translate-x-1/2 bg-white py-12 shadow-[0_14px_35px_-26px_rgba(15,23,42,0.45)] sm:mb-12 sm:py-14">
@@ -42,6 +43,21 @@ export default function SubpagePromo() {
                 <p className="mt-5 max-w-2xl text-lg text-gray-700">
                   Napisz do nas, jeśli chcesz uruchomić stronę pamięci, zapytać o materiały
                   graweru albo współpracę. Odpowiadamy możliwie szybko.
+                </p>
+              </>
+            ) : isWspolpraca ? (
+              <>
+                <h1 className="section-title text-4xl leading-tight sm:text-5xl">
+                  Zaproszenie do współpracy
+                </h1>
+                <p className="mt-5 max-w-2xl text-lg text-gray-700">
+                  Dla Bliskich zaprasza firmy i organizacje do oferowania nowoczesnych form
+                  upamiętnienia: eleganckich kodów QR, które pozwalają zachować wspomnienia,
+                  zdjęcia i historie życia bliskich w subtelnej, trwałej i godnej formie.
+                </p>
+                <p className="mt-3 max-w-2xl text-lg text-gray-700">
+                  To idealne rozwiązanie dla firm, które chcą poszerzyć ofertę o produkty
+                  łączące tradycję z nowoczesnością i dać klientom wyjątkowe formy pamięci.
                 </p>
               </>
             ) : (
