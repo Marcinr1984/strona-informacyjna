@@ -21,15 +21,15 @@ const SliderSection = () => {
             Witaj w DlaBliskich
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-cyan-50/95">
-            Tworzymy strony pamieci i kody QR, ktore pomagaja rodzinom przechowywac historie
-            zycia, zdjecia i wspomnienia bliskich.
+            Tworzymy strony pamięci i kody QR, które pomagają rodzinom przechowywać historie
+            życia, zdjęcia i wspomnienia bliskich.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               className="btn-primary px-6 py-3 text-sm"
               href="https://qr.dlabliskich.pl/auth/register"
             >
-              Utworz konto
+              Utwórz konto
             </a>
             <a
               className="btn-glass px-6 py-3 text-sm"

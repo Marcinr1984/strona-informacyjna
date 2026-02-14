@@ -67,7 +67,7 @@ export default function MaterialyPage() {
             </svg>
           </div>
           <h1 className="section-title text-4xl">
-            Materialy graweru kodu QR
+            Materiały graweru kodu QR
           </h1>
         </div>
         <p className="mt-4 text-gray-700">

@@ -8,10 +8,10 @@ import { usePathname } from 'next/navigation'
 const NAV_LINKS = [
   { href: '/', label: 'Start' },
   { href: '/o-nas', label: 'O nas' },
-  { href: '/jak-to-dziala', label: 'Jak to dziala' },
+  { href: '/jak-to-dziala', label: 'Jak to działa' },
   { href: '/cennik', label: 'Cennik' },
-  { href: '/wspolpraca', label: 'Wspolpraca' },
-  { href: '/kapsula-czasu', label: 'Kapsula czasu' },
+  { href: '/wspolpraca', label: 'Współpraca' },
+  { href: '/kapsula-czasu', label: 'Kapsuła czasu' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
 
@@ -88,13 +88,13 @@ export default function Menu() {
               href="https://qr.dlabliskich.pl/auth/login"
               className="rounded-lg px-3 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/12"
             >
-              Zaloguj sie
+              Zaloguj się
             </a>
             <a
               href="https://qr.dlabliskich.pl/auth/register"
               className="rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
-              Zaloz konto
+              Załóż konto
             </a>
           </div>
 
@@ -136,10 +136,10 @@ export default function Menu() {
                 )
               })}
               <a href="https://qr.dlabliskich.pl/auth/login" className="rounded-lg px-3 py-2 text-white/90 hover:bg-white/10">
-                Zaloguj sie
+                Zaloguj się
               </a>
               <a href="https://qr.dlabliskich.pl/auth/register" className="rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-3 py-2 font-semibold text-white">
-                Zaloz konto
+                Załóż konto
               </a>
             </nav>
           </div>

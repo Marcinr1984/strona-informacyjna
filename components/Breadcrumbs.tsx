@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 
 const LABELS: Record<string, string> = {
   'o-nas': 'O nas',
-  'jak-to-dziala': 'Jak to dziala',
-  materialy: 'Materialy',
+  'jak-to-dziala': 'Jak to działa',
+  materialy: 'Materiały',
   cennik: 'Cennik',
-  wspolpraca: 'Wspolpraca',
-  'kapsula-czasu': 'Kapsula czasu',
+  wspolpraca: 'Współpraca',
+  'kapsula-czasu': 'Kapsuła czasu',
   kontakt: 'Kontakt',
   faq: 'FAQ',
 }

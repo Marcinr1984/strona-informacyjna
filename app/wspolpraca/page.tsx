@@ -13,7 +13,7 @@ export default function WspolpracaPage() {
               <path d="M16 3.13a3 3 0 0 1 0 5.74" />
             </svg>
           </div>
-          <h1 className="section-title text-4xl">Zaproszenie do wspolpracy</h1>
+          <h1 className="section-title text-4xl">Zaproszenie do współpracy</h1>
         </div>
         <p className="mt-5 text-gray-700">
           Dla Bliskich zaprasza firmy i organizacje do oferowania nowoczesnych form

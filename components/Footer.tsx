@@ -24,16 +24,16 @@ export default function Footer() {
               <Link href="/o-nas" className="hover:underline">O nas</Link>
             </li>
             <li>
-              <Link href="/jak-to-dziala" className="hover:underline">Jak to dziala</Link>
+              <Link href="/jak-to-dziala" className="hover:underline">Jak to działa</Link>
             </li>
             <li>
               <Link href="/cennik" className="hover:underline">Cennik</Link>
             </li>
             <li>
-              <Link href="/wspolpraca" className="hover:underline">Wspolpraca</Link>
+              <Link href="/wspolpraca" className="hover:underline">Współpraca</Link>
             </li>
             <li>
-              <Link href="/kapsula-czasu" className="hover:underline">Kapsula czasu</Link>
+              <Link href="/kapsula-czasu" className="hover:underline">Kapsuła czasu</Link>
             </li>
             <li>
               <Link href="/kontakt" className="hover:underline">Kontakt</Link>

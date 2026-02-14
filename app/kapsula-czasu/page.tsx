@@ -17,7 +17,7 @@ export default function KapsulaCzasuPage() {
               <path d="M12 7v6l4 2" />
             </svg>
           </div>
-          <h1 className="section-title text-4xl">Kapsula czasu</h1>
+          <h1 className="section-title text-4xl">Kapsuła czasu</h1>
         </div>
         <p className="mt-5 text-gray-700">
           Kapsuła czasu to miejsce, w którym wspomnienia mogą przetrwać przez pokolenia.

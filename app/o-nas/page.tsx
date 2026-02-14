@@ -31,7 +31,7 @@ export default function ONasPage() {
               <path d="M12 21s-6.7-4.35-9.33-8.23C.65 9.8 2.04 5.5 6 5.5c2.07 0 3.24 1.18 4 2.2.76-1.02 1.93-2.2 4-2.2 3.96 0 5.35 4.3 3.33 7.27C18.7 16.65 12 21 12 21Z" />
             </svg>
           </div>
-          <h1 className="section-title text-4xl">Kim jestesmy</h1>
+          <h1 className="section-title text-4xl">Kim jesteśmy</h1>
         </div>
         <div className="mt-5 space-y-4 text-gray-700">
           <p>

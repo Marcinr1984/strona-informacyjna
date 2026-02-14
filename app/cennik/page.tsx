@@ -1,26 +1,26 @@
 const plans = [
   {
     name: "Start",
-    price: "49 zl",
+    price: "49 zł",
     period: "jednorazowo",
-    description: "Dla jednej strony pamieci z podstawowymi opcjami personalizacji.",
+    description: "Dla jednej strony pamięci z podstawowymi opcjami personalizacji.",
     features: [
-      "1 strona pamieci",
-      "Do 30 zdjec",
+      "1 strona pamięci",
+      "Do 30 zdjęć",
       "Podstawowy szablon",
-      "Kod QR do udostepnienia",
+      "Kod QR do udostępnienia",
     ],
     ctaLabel: "Wybierz Start",
     highlighted: false,
   },
   {
     name: "Rodzina",
-    price: "99 zl",
+    price: "99 zł",
     period: "jednorazowo",
-    description: "Najlepszy wybor dla rodzin, ktore chca rozbudowac miejsce wspomnien.",
+    description: "Najlepszy wybór dla rodzin, które chcą rozbudować miejsce wspomnień.",
     features: [
-      "Do 3 stron pamieci",
-      "Do 150 zdjec",
+      "Do 3 stron pamięci",
+      "Do 150 zdjęć",
       "Rozszerzone szablony i sekcje",
       "Priorytetowe wsparcie e-mail",
     ],
@@ -28,17 +28,17 @@ const plans = [
     highlighted: true,
   },
   {
-    name: "Pamiec+",
-    price: "149 zl",
+    name: "Pamięć+",
+    price: "149 zł",
     period: "jednorazowo",
-    description: "Pakiet dla bardziej rozbudowanych historii i dlugoterminowej opieki.",
+    description: "Pakiet dla bardziej rozbudowanych historii i długoterminowej opieki.",
     features: [
-      "Do 10 stron pamieci",
-      "Nielimitowane zdjecia",
-      "Wlasna domena (opcjonalnie)",
+      "Do 10 stron pamięci",
+      "Nielimitowane zdjęcia",
+      "Własna domena (opcjonalnie)",
       "Wsparcie premium",
     ],
-    ctaLabel: "Wybierz Pamiec+",
+    ctaLabel: "Wybierz Pamięć+",
     highlighted: false,
   },
 ];
@@ -60,8 +60,8 @@ export default function CennikPage() {
           </h1>
         </div>
         <p className="mt-4 text-base text-gray-700 transition-colors duration-300 sm:text-lg">
-          Wybierz plan dopasowany do liczby stron i zakresu wspomnien, ktore chcesz
-          zachowac dla bliskich.
+          Wybierz plan dopasowany do liczby stron i zakresu wspomnień, które chcesz
+          zachować dla bliskich.
         </p>
       </section>
 
@@ -77,7 +77,7 @@ export default function CennikPage() {
           >
             {plan.highlighted && (
               <p className="mb-4 inline-flex rounded-full bg-sky-500 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-                Najczesciej wybierany
+                Najczęściej wybierany
               </p>
             )}
 
@@ -111,8 +111,8 @@ export default function CennikPage() {
       </section>
 
       <p className="mt-8 text-center text-sm text-gray-600 transition-colors duration-300">
-        Potrzebujesz indywidualnej wyceny dla wiekszej liczby stron? Skontaktuj sie z nami
-        przez zakladke Kontakt.
+        Potrzebujesz indywidualnej wyceny dla większej liczby stron? Skontaktuj się z nami
+        przez zakładkę Kontakt.
       </p>
     </main>
   );

@@ -33,7 +33,7 @@ export default function FAQPage() {
               <circle cx="12" cy="17" r="1" fill="currentColor" stroke="none" />
             </svg>
           </div>
-          <h1 className="section-title text-4xl">Najczesciej zadawane pytania</h1>
+          <h1 className="section-title text-4xl">Najczęściej zadawane pytania</h1>
         </div>
         <div className="mt-8 space-y-4">
           {faqItems.map((item) => (
