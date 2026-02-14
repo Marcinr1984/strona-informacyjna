@@ -21,9 +21,9 @@ export default function Breadcrumbs() {
   const parts = pathname.split('/').filter(Boolean)
 
   return (
-    <div className="border-b border-slate-200 bg-[#dfe8f1]">
-      <div className="mx-auto w-full max-w-7xl px-4 py-3 text-sm text-slate-600 sm:px-6 lg:px-8">
-        <Link href="/" className="hover:text-slate-800">
+    <div className="w-full border-b border-slate-200/80 bg-white">
+      <div className="mx-auto w-full max-w-7xl px-4 py-3 text-sm text-slate-500 sm:px-6 lg:px-8">
+        <Link href="/" className="hover:text-slate-700">
           Start
         </Link>
         {parts.map((part, index) => {
@@ -35,9 +35,9 @@ export default function Breadcrumbs() {
             <span key={href}>
               {' / '}
               {isLast ? (
-                <span className="font-medium text-slate-800">{label}</span>
+                <span className="font-medium text-slate-600">{label}</span>
               ) : (
-                <Link href={href} className="hover:text-slate-800">
+                <Link href={href} className="hover:text-slate-700">
                   {label}
                 </Link>
               )}
