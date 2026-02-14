@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: '/', label: 'Start' },
   { href: '/o-nas', label: 'O nas' },
   { href: '/jak-to-dziala', label: 'Jak to dziala' },
-  { href: '/materialy', label: 'Materialy' },
   { href: '/cennik', label: 'Cennik' },
   { href: '/wspolpraca', label: 'Wspolpraca' },
   { href: '/kapsula-czasu', label: 'Kapsula czasu' },

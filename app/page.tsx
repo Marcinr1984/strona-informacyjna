@@ -22,7 +22,7 @@ const sections = [
     title: "Materiały graweru",
     description:
       "Sprawdź dostępne formy realizacji: kamień, stal, ceramika, aluminium i szkło.",
-    href: "/materialy",
+    href: "/jak-to-dziala#materialy",
   },
   {
     icon: "users",
@@ -185,7 +185,7 @@ export default function Home() {
                     Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
                     z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
                   </p>
-                  <Link href="/materialy" className="btn-primary mt-2 px-6 py-3 text-sm">
+                  <Link href="/jak-to-dziala#materialy" className="btn-primary mt-2 px-6 py-3 text-sm">
                     Dowiedz się więcej
                   </Link>
                 </div>

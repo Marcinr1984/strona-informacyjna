@@ -27,9 +27,6 @@ export default function Footer() {
               <Link href="/jak-to-dziala" className="hover:underline">Jak to dziala</Link>
             </li>
             <li>
-              <Link href="/materialy" className="hover:underline">Materialy</Link>
-            </li>
-            <li>
               <Link href="/cennik" className="hover:underline">Cennik</Link>
             </li>
             <li>
