@@ -161,8 +161,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-10 overflow-hidden rounded-3xl border border-[#153a59] bg-[radial-gradient(circle_at_20%_20%,#133f63_0%,#0b2238_45%,#07192c_100%)] p-8 text-white sm:p-10">
-          <div className="grid gap-8 md:grid-cols-[280px_1fr] md:items-center">
+        <section className="relative left-1/2 right-1/2 mt-10 w-screen -translate-x-1/2 overflow-hidden border-y border-[#153a59] bg-[radial-gradient(circle_at_20%_20%,#133f63_0%,#0b2238_45%,#07192c_100%)] py-12 text-white sm:py-14">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 md:grid-cols-[280px_1fr] md:items-center">
             <div className="relative mx-auto h-[230px] w-[200px] overflow-hidden rounded-2xl bg-white/10">
               <Image
                 src="/slider-bg.png"
@@ -178,7 +179,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h2 className="section-title text-3xl text-white">Tablice kodów QR Memorial</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tablice kodów QR Memorial</h2>
               <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cyan-50/95">
                 Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
                 z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
@@ -189,27 +190,28 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto my-10 h-px w-full max-w-xl bg-cyan-400/70" />
+            <div className="mx-auto my-10 h-px w-full max-w-xl bg-cyan-400/70" />
 
-          <div className="grid gap-8 md:grid-cols-[1fr_280px] md:items-center">
-            <div>
-              <h2 className="section-title text-3xl text-white">Zbuduj stronę pamięci online z ekspertem</h2>
-              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cyan-50/95">
+            <div className="grid gap-8 md:grid-cols-[1fr_280px] md:items-center">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Zbuduj stronę pamięci online z ekspertem</h2>
+                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cyan-50/95">
                 Oferujemy wskazówki ekspertów i spersonalizowane wsparcie, które pomaga stworzyć trwałe
                 dziedzictwo cyfrowe dla kolejnych pokoleń.
-              </p>
-              <Link href="/wspolpraca" className="mt-6 inline-flex rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-cyan-400">
-                Dowiedz się więcej
-              </Link>
-            </div>
-            <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl">
-              <Image
-                src="/slider-bggg.png"
-                alt="Tworzenie strony pamięci online"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/25" />
+                </p>
+                <Link href="/wspolpraca" className="mt-6 inline-flex rounded-lg bg-cyan-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-cyan-400">
+                  Dowiedz się więcej
+                </Link>
+              </div>
+              <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl">
+                <Image
+                  src="/slider-bggg.png"
+                  alt="Tworzenie strony pamięci online"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/25" />
+              </div>
             </div>
           </div>
         </section>
