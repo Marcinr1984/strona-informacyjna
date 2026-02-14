@@ -2,22 +2,32 @@
 
 import { usePathname } from 'next/navigation'
 
-function PromoIllustration() {
+function PromoIllustration({ isKontakt }: { isKontakt: boolean }) {
   return (
     <div className="relative mx-auto h-64 w-full max-w-[320px] overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-100 via-sky-50 to-violet-100">
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-cyan-300/60 blur-xl" />
       <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-violet-300/50 blur-xl" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="rounded-2xl border border-cyan-200 bg-white/80 p-6 shadow-lg backdrop-blur">
-          <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="22" cy="18" r="7" />
-            <path d="M10 42c1-8 6-13 12-13s11 5 12 13" />
-            <rect x="35" y="14" width="20" height="14" rx="3" />
-            <path d="M45 18v6M42 21h6" />
-            <path d="M37 40h18" />
-            <path d="M40 46h12" />
-            <path d="M44 34v16" />
-          </svg>
+          {isKontakt ? (
+            <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="10" y="16" width="44" height="24" rx="4" />
+              <path d="m12 18 20 14 20-14" />
+              <path d="M23 45c3 5 7 8 11 8s8-3 11-8" />
+              <path d="M19 48c2 3 5 5 7 6" />
+              <path d="M45 48c-2 3-5 5-7 6" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 64 64" className="h-24 w-24 text-cyan-600" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="22" cy="18" r="7" />
+              <path d="M10 42c1-8 6-13 12-13s11 5 12 13" />
+              <rect x="35" y="14" width="20" height="14" rx="3" />
+              <path d="M45 18v6M42 21h6" />
+              <path d="M37 40h18" />
+              <path d="M40 46h12" />
+              <path d="M44 34v16" />
+            </svg>
+          )}
         </div>
       </div>
     </div>
@@ -70,7 +80,7 @@ export default function SubpagePromo() {
               </>
             )}
           </div>
-          <PromoIllustration />
+          <PromoIllustration isKontakt={isKontakt} />
         </div>
       </div>
     </section>
