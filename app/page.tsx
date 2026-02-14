@@ -83,7 +83,7 @@ export default function Home() {
     <>
       <SliderSection />
       <main className="page-shell">
-        <section className="panel mt-8 p-8 text-center sm:mt-10 sm:p-10">
+        <section className="panel mt-8 px-8 pb-8 pt-12 text-center sm:mt-10 sm:px-10 sm:pb-10 sm:pt-14">
           <h1 className="section-title text-3xl sm:text-4xl">
             Stwórz stronę pamięci w kilku prostych krokach
           </h1>
