@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 
-function PromoIllustration({ isKontakt, isWspolpraca }: { isKontakt: boolean; isWspolpraca: boolean }) {
+function PromoIllustration({ isKontakt, isWspolpraca, isONas }: { isKontakt: boolean; isWspolpraca: boolean; isONas: boolean }) {
   return (
     <div className="relative mx-auto h-64 w-full max-w-[320px] overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-100 via-sky-50 to-violet-100">
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-cyan-300/60 blur-xl" />
@@ -104,7 +104,7 @@ export default function SubpagePromo() {
               </>
             )}
           </div>
-          <PromoIllustration isKontakt={isKontakt} isWspolpraca={isWspolpraca} />
+          <PromoIllustration isKontakt={isKontakt} isWspolpraca={isWspolpraca} isONas={isONas} />
         </div>
       </div>
     </section>
