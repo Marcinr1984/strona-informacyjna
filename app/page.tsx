@@ -161,56 +161,58 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="relative left-1/2 right-1/2 mt-14 w-screen -translate-x-1/2 overflow-hidden border-y border-[#153a59] bg-[radial-gradient(circle_at_20%_20%,#133f63_0%,#0b2238_45%,#07192c_100%)] py-12 text-white sm:mt-16 sm:py-14">
+        <section className="relative left-1/2 right-1/2 mt-16 w-screen -translate-x-1/2 overflow-hidden border-y border-[#17395a] bg-[radial-gradient(circle_at_22%_18%,#184c74_0%,#0e2f4e_38%,#0a223a_70%,#081b2f_100%)] py-16 text-white sm:mt-20 sm:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 md:grid-cols-[280px_1fr] md:items-center">
-            <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl bg-white/10">
-              <Image
-                src="/slider-bg.png"
-                alt="Kod QR memorial"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/35" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-cyan-600">
-                  ▶
-                </span>
+            <div className="space-y-14 sm:space-y-16">
+              <div className="grid gap-10 md:grid-cols-[280px_1fr] md:items-center md:gap-12">
+                <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl bg-white/10">
+                  <Image
+                    src="/slider-bg.png"
+                    alt="Kod QR memorial"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/35" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-cyan-600">
+                      ▶
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-5">
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tablice kodów QR Memorial</h2>
+                  <p className="max-w-2xl text-lg leading-relaxed text-cyan-50/95">
+                    Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
+                    z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
+                  </p>
+                  <Link href="/materialy" className="btn-primary mt-2 px-6 py-3 text-sm">
+                    Dowiedz się więcej
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Tablice kodów QR Memorial</h2>
-              <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cyan-50/95">
-                Pomagamy uhonorować życie ukochanej osoby trwałymi tablicami QR, które łączą pomnik
-                z bogatym cyfrowym hołdem i szybkim dostępem do historii życia.
-              </p>
-              <Link href="/materialy" className="btn-primary mt-6 px-6 py-3 text-sm">
-                Dowiedz się więcej
-              </Link>
-            </div>
-          </div>
 
-            <div className="mx-auto my-10 h-px w-full max-w-xl bg-cyan-400/70" />
+              <div className="mx-auto h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-cyan-300/80 to-transparent" />
 
-            <div className="grid gap-8 md:grid-cols-[1fr_280px] md:items-center">
-              <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Zbuduj stronę pamięci online z ekspertem</h2>
-                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cyan-50/95">
-                Oferujemy wskazówki ekspertów i spersonalizowane wsparcie, które pomaga stworzyć trwałe
-                dziedzictwo cyfrowe dla kolejnych pokoleń.
-                </p>
-                <Link href="/wspolpraca" className="btn-primary mt-6 px-6 py-3 text-sm">
-                  Dowiedz się więcej
-                </Link>
-              </div>
-              <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl">
-                <Image
-                  src="/slider-bggg.png"
-                  alt="Tworzenie strony pamięci online"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/25" />
+              <div className="grid gap-10 md:grid-cols-[1fr_280px] md:items-center md:gap-12">
+                <div className="space-y-5">
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Zbuduj stronę pamięci online z ekspertem</h2>
+                  <p className="max-w-2xl text-lg leading-relaxed text-cyan-50/95">
+                    Oferujemy wskazówki ekspertów i spersonalizowane wsparcie, które pomaga stworzyć trwałe
+                    dziedzictwo cyfrowe dla kolejnych pokoleń.
+                  </p>
+                  <Link href="/wspolpraca" className="btn-primary mt-2 px-6 py-3 text-sm">
+                    Dowiedz się więcej
+                  </Link>
+                </div>
+                <div className="relative mx-auto h-[230px] w-[280px] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/slider-bggg.png"
+                    alt="Tworzenie strony pamięci online"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/25" />
+                </div>
               </div>
             </div>
           </div>
