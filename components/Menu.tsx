@@ -35,7 +35,7 @@ export default function Menu() {
     }
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 70)
+      setScrolled(window.scrollY > 120)
     }
 
     handleScroll()
