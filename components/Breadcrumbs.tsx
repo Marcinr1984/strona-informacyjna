@@ -21,7 +21,7 @@ export default function Breadcrumbs() {
   const parts = pathname.split('/').filter(Boolean)
 
   return (
-    <div className="w-full border-b border-slate-200/80 bg-white">
+    <div className="w-full bg-white">
       <div className="mx-auto w-full max-w-7xl px-4 py-3 text-sm text-slate-500 sm:px-6 lg:px-8">
         <Link href="/" className="hover:text-slate-700">
           Start
