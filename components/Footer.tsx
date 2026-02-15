@@ -10,7 +10,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3">
               <Image
                 src="/logo-dlabliskich.svg"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-10 w-auto brightness-0 invert"
                 alt="Logo Dla Bliskich"
                 width={140}
                 height={32}
@@ -26,7 +26,6 @@ export default function Footer() {
               <li><Link href="/jak-to-dziala" className="hover:text-white">Jak to działa</Link></li>
               <li><Link href="/cennik" className="hover:text-white">Cennik</Link></li>
               <li><Link href="/wspolpraca" className="hover:text-white">Współpraca</Link></li>
-              <li><Link href="/kontakt" className="hover:text-white">Kontakt</Link></li>
             </ul>
           </div>
 
