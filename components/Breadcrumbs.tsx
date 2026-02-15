@@ -11,6 +11,9 @@ const LABELS: Record<string, string> = {
   wspolpraca: 'Współpraca',
   kontakt: 'Kontakt',
   faq: 'FAQ',
+  regulamin: 'Regulamin',
+  'polityka-prywatnosci': 'Polityka prywatności',
+  'pliki-cookie': 'Pliki cookie',
 }
 
 export default function Breadcrumbs() {
