@@ -42,7 +42,24 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold text-white">Język</h3>
-            <p className="mt-4 text-base text-white/90">Polski (PL)</p>
+            <label htmlFor="footer-language" className="sr-only">Wybierz język</label>
+            <div className="relative mt-4 max-w-[190px]">
+              <select
+                id="footer-language"
+                name="language"
+                defaultValue="pl"
+                className="w-full appearance-none rounded-lg border border-white/30 bg-white/10 px-3 py-2 pr-9 text-base text-white outline-none transition-colors hover:bg-white/15 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/40"
+              >
+                <option value="pl" className="text-slate-900">Polski (PL)</option>
+                <option value="en" className="text-slate-900">English (EN)</option>
+                <option value="de" className="text-slate-900">Deutsch (DE)</option>
+              </select>
+              <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white/85">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.512a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" clipRule="evenodd" />
+                </svg>
+              </span>
+            </div>
           </div>
 
           <div>
