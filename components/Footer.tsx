@@ -43,12 +43,12 @@ export default function Footer() {
           <div className="lg:pr-6">
             <h3 className="text-lg font-semibold text-white">Język</h3>
             <label htmlFor="footer-language" className="sr-only">Wybierz język</label>
-            <div className="relative mt-4 max-w-[220px]">
+            <div className="relative mt-4 w-[230px] max-w-full">
               <select
                 id="footer-language"
                 name="language"
                 defaultValue="pl"
-                className="w-full appearance-none rounded-lg border border-white/30 bg-white/10 px-3 py-2 pr-9 text-base text-white outline-none transition-colors hover:bg-white/15 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/40"
+                className="w-full appearance-none rounded-lg border border-white/30 bg-white/10 px-3 py-2 pr-9 text-sm text-white outline-none transition-colors hover:bg-white/15 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/40"
               >
                 <option value="pl" className="text-slate-900">Polski (PL)</option>
                 <option value="en" className="text-slate-900">English (EN)</option>
