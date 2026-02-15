@@ -42,7 +42,7 @@ export default function SubpagePromo() {
   const isONas = pathname === '/o-nas'
 
   return (
-    <section className="relative left-1/2 right-1/2 mb-10 w-screen -translate-x-1/2 bg-white py-12 shadow-[0_14px_35px_-26px_rgba(15,23,42,0.45)] sm:mb-12 sm:py-14">
+    <section className="relative left-1/2 right-1/2 mb-16 w-screen -translate-x-1/2 bg-white py-12 shadow-[0_14px_35px_-26px_rgba(15,23,42,0.45)] sm:mb-20 sm:py-14">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>

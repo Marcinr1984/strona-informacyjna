@@ -129,30 +129,30 @@ function MaterialIcon({ type }: { type: string }) {
 
 export default function JakToDzialaPage() {
   return (
-    <main className="page-shell">
-      <section className="panel p-8 sm:p-10">
+    <main className="page-shell max-w-[88rem]">
+      <section className="panel p-8 sm:p-12">
         <h2 className="section-title text-3xl sm:text-4xl">Proces krok po kroku</h2>
         <p className="mt-3 max-w-3xl text-gray-700">
           To rozwinięcie sekcji ze strony głównej: każdy etap jest opisany dokładniej, aby łatwo
           przejść od pomysłu do gotowej strony pamięci.
         </p>
 
-        <div className="relative mt-10">
+        <div className="relative mt-12">
           <div className="absolute bottom-0 left-[1.35rem] top-0 w-px bg-cyan-200 md:hidden" />
-          <div className="absolute left-0 right-0 top-[1.45rem] hidden h-px bg-cyan-200 md:block" />
+          <div className="absolute left-0 right-0 top-[1.45rem] hidden h-px bg-cyan-200 lg:block" />
 
-          <ol className="space-y-6 md:grid md:grid-cols-4 md:gap-5 md:space-y-0">
+          <ol className="space-y-7 md:grid md:grid-cols-2 md:gap-7 md:space-y-0 lg:grid-cols-4 lg:gap-6">
             {steps.map((step) => (
               <li key={step.number} className="relative pl-12 md:pl-0 md:pt-12">
                 <span className="absolute left-0 top-0 inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-cyan-300 bg-white text-sm font-bold text-cyan-700 shadow-sm md:left-1/2 md:-translate-x-1/2">
                   {step.number}
                 </span>
-                <article className="h-full rounded-2xl border border-slate-200 bg-slate-50/70 p-5">
+                <article className="h-full rounded-2xl border border-slate-200 bg-slate-50/70 p-7">
                   <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
                     <StepIllustrationIcon step={step.number} />
                   </div>
-                  <h3 className="section-title text-xl">{step.title}</h3>
-                  <p className="mt-2 text-gray-700">{step.description}</p>
+                  <h3 className="section-title text-2xl leading-tight">{step.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-gray-700">{step.description}</p>
                 </article>
               </li>
             ))}
