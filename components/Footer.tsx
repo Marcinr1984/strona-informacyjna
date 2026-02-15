@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="lg:pr-6">
             <h3 className="text-lg font-semibold text-white">Język</h3>
             <label htmlFor="footer-language" className="sr-only">Wybierz język</label>
-            <div className="relative mt-4 w-[230px] max-w-full">
+            <div className="relative mt-4 w-[180px] max-w-full">
               <select
                 id="footer-language"
                 name="language"
