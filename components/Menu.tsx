@@ -20,6 +20,7 @@ export default function Menu() {
   const isHome = pathname === '/'
   const [scrolled, setScrolled] = useState(false)
   const solidMenuClasses = 'border-[#1b2940] bg-[#0b1426]'
+  const useGlassMenu = isHome && !scrolled && !isOpen
 
   useEffect(() => {
     document.documentElement.classList.remove('dark')
@@ -45,12 +46,12 @@ export default function Menu() {
     <header className="sticky top-0 z-50">
       <div
         className={`relative w-full overflow-hidden border-b text-white ${
-          isHome && !scrolled
+          useGlassMenu
             ? 'border-white/20 bg-slate-950/20 backdrop-blur-2xl'
             : solidMenuClasses
         }`}
       >
-        {isHome && !scrolled && (
+        {useGlassMenu && (
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/[0.08] via-white/[0.03] to-white/[0.08]" />
         )}
         <div className="relative flex w-full items-center justify-between gap-4 px-5 py-5 lg:px-8 xl:px-12">
@@ -116,7 +117,7 @@ export default function Menu() {
             id="mobile-menu"
             className={`border-t px-4 py-3 lg:hidden ${
               isHome && !scrolled
-                ? 'border-white/20 bg-slate-950/38 backdrop-blur-xl'
+                ? 'border-[#1b2940] bg-[#0b1426]'
                 : solidMenuClasses
             }`}
           >
