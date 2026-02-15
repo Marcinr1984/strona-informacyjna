@@ -1,21 +1,25 @@
 const steps = [
   {
-    title: "1. Tworzysz wspomnienia",
+    number: 1,
+    title: "Tworzysz wspomnienia",
     description:
       "Logujesz się do konfiguratora online i tworzysz przykładowe wspomnienia: dodajesz zdjęcia, historie, cytaty oraz linki do filmów przygotowanych przez siebie (filmy nie są przesyłane do nas).",
   },
   {
-    title: "2. Wybierasz pakiet i formę kodu QR",
+    number: 2,
+    title: "Wybierasz pakiet i formę kodu QR",
     description:
       "Wybierasz pakiet trwałości kodu QR, od którego zależy cena podstawowa. Dodatkowo możesz wybrać produkt fizyczny z naniesionym kodem oraz transport produktu.",
   },
   {
-    title: "3. Generujesz kod i wskazujesz opiekuna strony",
+    number: 3,
+    title: "Generujesz kod i wskazujesz opiekuna strony",
     description:
       "Po płatności kod QR zostaje wygenerowany. Możesz wskazać opiekuna strony, który będzie wspierał utrzymanie i aktualizację wspomnień po uzyskaniu zgody zamawiającego.",
   },
   {
-    title: "4. Odbiór i dostęp do wspomnień",
+    number: 4,
+    title: "Odbiór i dostęp do wspomnień",
     description:
       "Kod cyfrowy otrzymujesz od razu, a produkt fizyczny dostarczamy pod wskazany adres (koszt transportu doliczany osobno). Po zeskanowaniu kodu bliscy mogą odwiedzać stronę pamięci.",
   },
@@ -133,30 +137,27 @@ export default function JakToDzialaPage() {
           przejść od pomysłu do gotowej strony pamięci.
         </p>
 
-        <div className="mx-auto mt-9 hidden max-w-5xl items-center justify-between px-10 md:flex">
-          <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
-          <span className="h-px flex-1 bg-cyan-300" />
-          <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
-          <span className="h-px flex-1 bg-cyan-300" />
-          <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
-          <span className="h-px flex-1 bg-cyan-300" />
-          <span className="h-3 w-3 rounded-full border-2 border-cyan-500 bg-white" />
-        </div>
-      </section>
+        <div className="relative mt-10">
+          <div className="absolute bottom-0 left-[1.35rem] top-0 w-px bg-cyan-200 md:hidden" />
+          <div className="absolute left-0 right-0 top-[1.45rem] hidden h-px bg-cyan-200 md:block" />
 
-      <section className="mt-8 grid gap-5 md:grid-cols-2">
-        {steps.map((step) => (
-          <article
-            key={step.title}
-            className="panel rounded-2xl border border-slate-200 bg-white p-6"
-          >
-            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
-              <StepIllustrationIcon step={Number(step.title.split(".")[0])} />
-            </div>
-            <h2 className="section-title text-xl">{step.title}</h2>
-            <p className="mt-3 text-gray-700">{step.description}</p>
-          </article>
-        ))}
+          <ol className="space-y-6 md:grid md:grid-cols-4 md:gap-5 md:space-y-0">
+            {steps.map((step) => (
+              <li key={step.number} className="relative pl-12 md:pl-0 md:pt-12">
+                <span className="absolute left-0 top-0 inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-cyan-300 bg-white text-sm font-bold text-cyan-700 shadow-sm md:left-1/2 md:-translate-x-1/2">
+                  {step.number}
+                </span>
+                <article className="h-full rounded-2xl border border-slate-200 bg-slate-50/70 p-5">
+                  <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full bg-cyan-100 text-cyan-600">
+                    <StepIllustrationIcon step={step.number} />
+                  </div>
+                  <h3 className="section-title text-xl">{step.title}</h3>
+                  <p className="mt-2 text-gray-700">{step.description}</p>
+                </article>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
 
       <section className="panel mt-8 p-8">
