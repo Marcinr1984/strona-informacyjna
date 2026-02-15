@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="mt-16 border-t border-[#1b2940] bg-[radial-gradient(circle_at_22%_18%,#184c74_0%,#0e2f4e_38%,#0a223a_70%,#081b2f_100%)] text-white transition-colors duration-300">
       <div className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr_.7fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr_.55fr_1fr]">
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
               <Image
@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white">Język</h3>
             <label htmlFor="footer-language" className="sr-only">Wybierz język</label>
-            <div className="relative mt-4 max-w-[150px]">
+            <div className="relative mt-4 max-w-[128px]">
               <select
                 id="footer-language"
                 name="language"
