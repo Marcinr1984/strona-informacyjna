@@ -21,8 +21,9 @@ const SliderSection = () => {
             Witaj w DlaBliskich
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-cyan-50/95">
-            Tworzymy strony pamięci i kody QR, które pomagają rodzinom przechowywać historie
-            życia, zdjęcia i wspomnienia bliskich.
+            Tworzymy cyfrowe strony pamięci oraz spersonalizowane kody QR, które pomagają
+            rodzinom przechowywać historie życia, zdjęcia i wspomnienia bliskich oraz dzielić
+            się nimi z kolejnymi pokoleniami.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -35,7 +36,7 @@ const SliderSection = () => {
               className="btn-glass px-6 py-3 text-sm"
               href="https://qr.dlabliskich.pl/auth/login"
             >
-              Zaloguj sie
+              Zaloguj się
             </a>
           </div>
         </div>
