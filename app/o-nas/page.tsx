@@ -1,11 +1,3 @@
-function PhotoPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="mt-4 flex min-h-44 items-center justify-center rounded-xl border border-dashed border-gray-400/70 bg-gray-100/60 p-6 text-center text-sm text-gray-600 dark:border-gray-600 dark:bg-gray-800/40 dark:text-gray-300">
-      {label}
-    </div>
-  );
-}
-
 const memoryFeatures = [
   "Biografię i ważne momenty z życia",
   "Galerię zdjęć i materiałów wideo",
@@ -74,11 +66,6 @@ export default function ONasPage() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="panel mt-8 p-8">
-        <PhotoPlaceholder label="Miejsce na fotografię kodu QR na nagrobku" />
-        <PhotoPlaceholder label="Miejsce na fotografię osoby z kodem QR" />
       </section>
     </main>
   );
